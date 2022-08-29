@@ -483,11 +483,19 @@ footer a{
     }
 
     .projetos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: 200px;
+        height: 250px;
     }
 
     .projetos img{
         width: 200px;
+    }
+
+    .parallax h2{
+        font-size: 30px;
     }
 
     .tecnologias{
