@@ -17,7 +17,7 @@
 
 /* Header  */
 
-.material-symbols-outlined{
+#menu-container{
     display: none;
 }
 
@@ -452,11 +452,74 @@ footer a{
 
 @media screen and (max-width: 500px){
     
+    #sobre img{
+        width: 200px;
+    }
+
+    #footer-container2{
+        display: none;
+    }
+
+    #sessao-principal{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #sessao-principal h1{
+        font-size: 5vw;
+    }
+
+    #sessao-principal p{
+        font-size: 3vw;
+        margin-bottom: 40px;
+    }
+
+    #sessao-principal form input{
+        flex: 0 1;
+    }
+
+    #sessao-principal button input{
+        flex: 0 1;
+    }
+
+    .projetos{
+        width: 200px;
+    }
+
+    .projetos img{
+        width: 200px;
+    }
+
+    .tecnologias{
+        width: 200px;
+    }
+}
+
+footer .fa-brands{
+    font-size: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    #menu-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    #menu-container img{
+        width: 25px;
+    }
+
     .material-symbols-outlined{
         display: block;
         text-align: right;
         font-size: 35px;
         padding: 10px;
+    }
+
+    .material-symbols-outlined:hover{
+        cursor: pointer;
     }
 
     header{
@@ -479,32 +542,6 @@ footer a{
         padding-right: 10px;
         margin-bottom: 20px;
     }
-    
-    #sobre img{
-        width: 200px;
-    }
-
-    #footer-container2{
-        display: none;
-    }
-
-    #sessao-principal{
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    #sessao-principal h1{
-        font-size: 5vw;
-    }
-
-    #sessao-principal p{
-        font-size: 3vw;
-        margin-bottom: 40px;
-    }
-}
-
-footer .fa-brands{
-    font-size: 20px;
 }
 
 @media screen and (max-width: 931px) {
