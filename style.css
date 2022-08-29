@@ -486,15 +486,19 @@ footer a{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 200px;
+        width: 160px;
         height: 250px;
     }
 
     .projetos img{
-        width: 200px;
+        width: 160px;
     }
 
     .parallax h2{
+        font-size: 30px;
+    }
+
+    .formulario h2{
         font-size: 30px;
     }
 
