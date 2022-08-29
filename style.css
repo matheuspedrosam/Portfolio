@@ -17,6 +17,10 @@
 
 /* Header  */
 
+.material-symbols-outlined{
+    display: none;
+}
+
 header{
     max-width: 1200px;
     display: flex;
@@ -162,6 +166,9 @@ header .fa-brands:hover{
     padding: 20px;
 }
 
+#sobre img{
+    width: 400px;
+}
 
 .fa-street-view{
     background-color: var(--cor-roxa);
@@ -204,8 +211,8 @@ header .fa-brands:hover{
 }
 
 #projetos h1{
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     font-size: 2.5em;
     text-align: center;
     color: var(--cor-preto);
@@ -240,8 +247,6 @@ header .fa-brands:hover{
 }
 
 .projetos h2{
-    padding-top: 40px;
-    padding-bottom: 40px;
     font-size: 2.2em;
     color: var(--cor-preto);
     font-weight: 300;
@@ -444,6 +449,63 @@ footer a{
     padding: 30px;
 }
 
+
+@media screen and (max-width: 500px){
+    
+    .material-symbols-outlined{
+        display: block;
+        text-align: right;
+        font-size: 35px;
+        padding: 10px;
+    }
+
+    header{
+        flex-direction: column;
+        display: none;
+    }
+
+    header nav{
+        align-items: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px 0px;
+    }
+
+    header .fa-brands{
+        font-size: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+    }
+    
+    #sobre img{
+        width: 200px;
+    }
+
+    #footer-container2{
+        display: none;
+    }
+
+    #sessao-principal{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #sessao-principal h1{
+        font-size: 5vw;
+    }
+
+    #sessao-principal p{
+        font-size: 3vw;
+        margin-bottom: 40px;
+    }
+}
+
+footer .fa-brands{
+    font-size: 20px;
+}
 
 @media screen and (max-width: 931px) {
     #img-sobre{
