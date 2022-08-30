@@ -31,6 +31,10 @@ header{
     margin: auto;
 }
 
+header img:hover{
+    transform: translate(-1px, -1px);
+}
+
 header nav a{
     margin-right: 30px;
     margin-left: 30px;
@@ -508,7 +512,9 @@ footer a:hover{
     }
 
     .tecnologias{
-        width: 200px;
+        width: 42vw;
+        text-align: left;
+        font-size: 0.8em;
     }
 }
 
