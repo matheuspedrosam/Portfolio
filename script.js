@@ -21,3 +21,7 @@ function ajeitarMenu(){
         menu_hamburguer.innerHTML = 'close'
     }
 }
+
+function alertaBotao(){
+    window.alert('Ainda em Desenvolvimento...')
+}

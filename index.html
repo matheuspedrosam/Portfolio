@@ -30,10 +30,10 @@
             <a href="#contato">Contato</a>
         </nav>
         <div id="perfis-sociais">
-            <a target="_blank" href="https://www.instagram.com/matheuspedrosam/"><i class="fa-brands fa-instagram"></i></a>
-            <a target="_blank" href="https://github.com/matheuspedrosam"><i class="fa-brands fa-github"></i></a>
-            <a target="_blank" href="https://wa.me/+5582988166281"><i class="fa-brands fa-whatsapp"></i></a>
-            <a target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/"><i class="fa-brands fa-linkedin"></i></a>
+            <a id="insta" target="_blank" href="https://www.instagram.com/matheuspedrosam/"><i class="fa-brands fa-instagram"></i></a>
+            <a id="github" target="_blank" href="https://github.com/matheuspedrosam"><i class="fa-brands fa-github"></i></a>
+            <a id="whats" target="_blank" href="https://wa.me/+5582988166281"><i class="fa-brands fa-whatsapp"></i></a>
+            <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </header>
 
@@ -46,9 +46,11 @@
         <div id="primeira-apresentacao">
             <p>Um <strong>Web Developer</strong> e amante da área em MCZ/AL. <br> Eu venho focado nos estudos na parte do Fron-End, <br> lembrando sempre da responsividade.</p>
         </div>
-        <form action="get">
+        <form method="get">
             <input type="email" placeholder="Email addres">
-            <button type="submit">Conecte-se Comigo</button>
+            <button onclick="alertaBotao()" >
+                Conecte-se Comigo
+            </button>
         </form>
     </section>
 
