@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-@keyframes socialmedia{
+@keyframes header-efect{
     0%{
         position: relative; top: -8px;
     }
@@ -44,11 +44,6 @@ header img:hover{
     transform: translate(-1px, -1px);
 }
 
-header #img-logo{
-    animation-name: socialmedia;
-	animation-duration: 0.2s;
-	animation-delay: 0s; 
-}
 
 header nav a{
     margin-right: 30px;
@@ -74,6 +69,7 @@ header nav a:hover::after{
     transition: 0.4s;
 }
 
+
 .fa-brands{
     margin: 0px 10px;
     color: var(--cor-cinza);
@@ -83,28 +79,60 @@ header .fa-brands:hover{
     transform: translate(-2px, -2px);
 }
 
-#insta{
-    animation-name: socialmedia;
+/* Header Animations  */
+
+header #img-logo{
+    animation-name: header-efect;
+	animation-duration: 0.2s;
+	animation-delay: 0s; 
+}
+
+header #nav-sobre{
+    animation-name: header-efect;
 	animation-duration: 0.2s;
 	animation-delay: 0.3s; 
 }
 
-#github{
-    animation-name: socialmedia;
+header #nav-projetos{
+    animation-name: header-efect;
 	animation-duration: 0.2s;
 	animation-delay: 0.6s; 
 }
 
-#whats{
-    animation-name: socialmedia;
+header #nav-skills{
+    animation-name: header-efect;
 	animation-duration: 0.2s;
 	animation-delay: 0.9s; 
 }
 
-#linkedin{
-    animation-name: socialmedia;
+header #nav-contato{
+    animation-name: header-efect;
 	animation-duration: 0.2s;
 	animation-delay: 1.2s; 
+}
+
+header #insta{
+    animation-name: header-efect;
+	animation-duration: 0.2s;
+	animation-delay: 1.5s; 
+}
+
+header #github{
+    animation-name: header-efect;
+	animation-duration: 0.2s;
+	animation-delay: 1.8s; 
+}
+
+header #whats{
+    animation-name: header-efect;
+	animation-duration: 0.2s;
+	animation-delay: 2.1s; 
+}
+
+header #linkedin{
+    animation-name: header-efect;
+	animation-duration: 0.2s;
+	animation-delay: 2.4s; 
 }
 
 /* Conteudo Principal  */
@@ -506,7 +534,57 @@ footer a:hover{
 
 
 @media screen and (max-width: 500px){
+
+        /* Header Animations  */
+
+    header #img-logo{
+        animation-duration: 0.1s;
+    }
+
+    header #nav-sobre{
+        animation-duration: 0.1s;
+        animation-delay: 0.2s; 
+    }
+
+    header #nav-projetos{
+        animation-duration: 0.1s;
+        animation-delay: 0.4s; 
+    }
+
+    header #nav-skills{
+        animation-duration: 0.1s;
+        animation-delay: 0.6s; 
+    }
+
+    header #nav-contato{
+        animation-duration: 0.1s;
+        animation-delay: 0.8s; 
+    }
+
+    header #insta{
+        animation-duration: 0.1s;
+        animation-delay: 1s; 
+    }
+
+    header #github{
+        animation-duration: 0.1s;
+        animation-delay: 1.2s; 
+    }
+
+    header #whats{
+        animation-name: header-efect;
+        animation-duration: 0.1s;
+        animation-delay: 1.4s; 
+    }
+
+    header #linkedin{
+        animation-name: header-efect;
+        animation-duration: 0.1s;
+        animation-delay: 1.6s; 
+    }
     
+    /* conteúdo  */
+
     #sobre img{
         width: 200px;
     }
