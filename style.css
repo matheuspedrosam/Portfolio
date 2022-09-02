@@ -66,7 +66,7 @@ header nav a::after{
 
 header nav a:hover::after{
     width: 100%;
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 
@@ -476,6 +476,10 @@ footer a:hover{
 
 #avatar-footer img{
     width: 35px;
+}
+
+#avatar-footer img:hover{
+    transform: translate(0px, -2px);
 }
 
 #footer-container1{
