@@ -215,3 +215,23 @@ footer > a{
 footer > a:hover{
     text-decoration: underline;
 }
+
+@media (max-width: 425px){
+    nav{
+        padding-left: 10px;
+    }
+
+    nav > a{
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 372px){
+    nav {
+        padding-left: 15px;
+    }
+
+    nav > a{
+        font-size: 0.6em;
+    }
+}
