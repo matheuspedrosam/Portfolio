@@ -362,7 +362,6 @@ header #linkedin{
 }
 
 .tecnologias:hover{
-    cursor: pointer;
     transform: translate(-2px, -2px);
     transition: 0.2s;
 }
