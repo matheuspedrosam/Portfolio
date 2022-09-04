@@ -75,7 +75,6 @@ nav > a:hover{
 }
 
 .section1{
-    /* width: 1600px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -83,9 +82,6 @@ nav > a:hover{
     justify-content: space-around;
 }
 
-article{
-
-}
 
 article > h1 {
     color: white;
@@ -138,9 +134,6 @@ article > button:active{
     text-align: center;
     color: white;
     font-family: var(--fonteR);
-}
-
-strong{
 }
 
 .section2 p{

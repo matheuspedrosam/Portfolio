@@ -77,6 +77,7 @@
 
 
     <script>
+        div_menu_hamburguer = document.querySelector('#menuzin')
         menu_hamburgue = document.querySelector('.material-symbols-outlined')
         header = document.querySelector('header')
 
@@ -94,8 +95,11 @@
         function ajeitarMenu(){
             if (window.innerWidth >= 600){
                 header.style.display = 'flex'
+                div_menu_hamburguer.style.display = 'none'
             } else{
                 header.style.display = 'none'
+                div_menu_hamburguer.style.display = 'block'
+                menu_hamburgue.innerHTML = 'menu'
             }
         }
 
