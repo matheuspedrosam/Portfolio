@@ -15,19 +15,45 @@ body{
     background-image: linear-gradient(68.15deg, #2F2325 , #8E5D52 );
 }
 
+main{
+    margin: auto;
+    max-width: 1600px;
+}
+
+#menuzin{
+    display: none;
+}
+
+.material-symbols-outlined{
+    cursor: pointer;
+    padding: 10px;
+    color: whitesmoke;
+}
+
 header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 900px;
+    justify-content: center;
     padding-bottom: 15px;
     padding-top: 10px;
     border-bottom: 0.4px solid rgba(255, 255, 255, 0.185);
+}
 
+.header-container{
+    align-items: center;
+    width: 1600px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .logo{
     padding-left: 25px;
+}
+
+.logo:hover{
+    transform: translate(0px, -2px);
 }
 
 nav{
@@ -49,12 +75,12 @@ nav > a:hover{
 }
 
 .section1{
+    /* width: 1600px; */
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-
-
 }
 
 article{
@@ -75,36 +101,27 @@ article > p {
     font-style: italic;
 }
 
-article > div {
-    padding-top: 20px;
+article > button {
+    border: none;
+    padding: 20px;
+    cursor: pointer;
     border-radius: 10px;
     color: black;
     text-align: center;
-    height: 50px;
     width: 185px;
     background-color: rgba(255, 236, 183, 0.856);
     font-family: var(--fonteS);
 }
 
-div > a{
-    color: black;
-    text-decoration: none;
-}
-
-div > a:hover{
+article > button:hover{
     text-decoration: underline;
+    transform: translate(0px, -2px);
+    box-shadow: 0px 0px 5px sandybrown;
 }
 
-div > a:active{
-    color: rgba(255, 255, 255, 0.26);
+article > button:active{
+    color: white;
 }
-
-.logo-principal{
-    display: flex;
-    justify-content: flex-end;
-}
-
-
 
 .section2{
     padding-top: 25px;
@@ -116,7 +133,7 @@ div > a:active{
     flex-direction: column;
 }
 
-.section2 > h2{
+.section2 h2{
     margin-bottom: 35px;
     text-align: center;
     color: white;
@@ -126,7 +143,7 @@ div > a:active{
 strong{
 }
 
-.section2 > p{
+.section2 p{
     font-family: var(--fonteS);
     margin-bottom: 25px;
     text-align: center;
@@ -151,12 +168,14 @@ footer{
 .paragrafo3{
     padding-bottom: 35px;
 }
+
 .matheus{
     height: 12px;
     width: 200px;
     font-family: var(--fonteS);
     font-size: 12px;
     color: rgba(255, 245, 219, 0.658);
+    padding-left: 10px;
     margin: auto; 
 }
 
@@ -172,4 +191,60 @@ footer{
 
 .matheus > a:active{
     color: rgb(255, 254, 204);
+}
+
+
+
+
+
+@media (max-width: 600px){
+    header{
+        display: none;
+    }
+
+    #menuzin{
+        display: block;
+        border-bottom: 0.4px solid rgba(255, 255, 255, 0.185);
+    }
+
+    .header-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo{
+        padding: 0;
+    }
+
+    nav{
+        margin-top: 20px;
+        gap: 15px;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .section1-article{
+        margin-top: 20px;
+        width: 300px;
+        text-align: center;
+        order: 1;
+    }
+
+    .section1{
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .logo-principal img{
+        width: 250px;
+    }
+
+    .section2 h2{
+        font-size: 1.2em;
+    }
+
+    .section2 p{
+        font-size: 0.8em;
+    }
 }
