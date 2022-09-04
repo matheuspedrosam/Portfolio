@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --font-principal: 'Roboto', 'sans-serif';
+    --cor-roxa: #655ec6;
+    --cor-roxa2: #7e6ce6;
+    --cor-cinza-claro: #2c2c38;
+    --cor-cinza: #5d5f6c;
+    --cor-cinza-escuro: #21212d;
+    --cor-clara: #f4f7fe;
+    --cor-azul: #52cbe8;
+    --cor-verde: #76dcb7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-principal);
+}
+
+::-webkit-scrollbar{
+    background-color: var(--cor-cinza-claro);
+    width: 12px;
+    height: 12px;
+}
+
+ ::-webkit-scrollbar-thumb{
+    background-color: var(--cor-cinza);
+    border-radius: 20px;
+    height: 30%;
+}
+
+body{
+    background-color: var(--cor-cinza-escuro);
+}
+
+main{
+    display: flex;
+}
+
+
+#kaban{
+    padding: 0px 30px 30px 0px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--cor-cinza-claro);
+    flex: 0.5;
+    max-width: 300px;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+#logo-container{
+    color: white;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    align-items: center;
+    gap: 0px 10px;
+    padding-left: 30px;
+}
+
+#logo{
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(90deg, var(--cor-roxa2), var(--cor-roxa), var(--cor-cinza-escuro));
+}
+
+#kaban h1{
+    font-size: 2.25em;
+    padding: 0;
+    margin: 0;
+}
+
+#menu{
+    color: var(--cor-cinza);
+}
+
+#menu p{
+    padding-left: 30px;
+}
+
+#menu nav{
+    font-size: 1.25em;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px 0px;
+}
+
+#menu nav a{
+    text-decoration: none;
+    padding: 14px 0px 14px 30px;
+    color: var(--cor-cinza);
+}
+
+#menu nav a:hover{
+    background-color: var(--cor-roxa2);
+    color: white;
+    border-radius: 0px 25px 25px 0px;
+}
+
+
+.menu-links{
+    display: flex;
+    align-items: center;
+    gap: 0px 5px;
+}
+
+#bottom-menu{
+    padding-left: 30px;
+}
+
+#theme{
+    background-color: var(--cor-cinza-escuro);
+    max-width: 250px;
+    border-radius: 5px;
+    display: flex;
+    padding: 20px;
+    gap: 0px 5px;
+    justify-content: space-around;
+}
+
+#change-theme{
+    width: 50px;
+    background-color: var(--cor-roxa2);
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-end;
+    transition: 0.3s ease-in;
+}
+
+#change-theme:hover{
+    cursor: pointer;
+}
+
+#ball{
+    background-color: white;
+    width: 50%;
+    border-radius: 50%;
+    height: 100%;
+}
+
+#bottom-menu .menu-links{
+    margin-top: 30px;
+    color: var(--cor-cinza);
+    gap: 15px;
+    max-width: 140px;
+}
+
+#side-bar-hidden:hover{
+    cursor: pointer;
+    color: white;
+}
+
+
+ /* Platform Launch  */
+
+
+#platform-launch{
+    color: white;
+    border-left: 1px solid rgba(255, 255, 255, 0.205);
+    flex: 1.5;
+}
+
+
+ /* Platform Launch  HEADER */
+
+
+#platform-launch header{
+    background-color: var(--cor-cinza-claro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px 20px 30px;
+}
+
+#menu-and-platform-container{
+    display: flex;
+    align-items: center;
+    gap: 0px 30px;
+}
+
+#platform-launch header h1{
+    font-size: 1.75em;
+}
+
+#platform-launch header i{
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#platform-launch header i:hover{
+    color: var(--cor-cinza);
+}
+
+#button-container{
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+}
+
+#button-container button{
+    padding: 10px 25px 10px 25px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: 500;
+    background-color: var(--cor-roxa2);
+    cursor: pointer;
+}
+
+#button-container button:hover{
+    background-image: linear-gradient(90deg, var(--cor-roxa), var(--cor-roxa2));
+}
+
+#button-container span{
+    cursor: pointer;
+}
+
+/* Platform Launch  TASKS */
+
+#tasks-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0px;
+    padding: 20px 0px 20px 20px;
+    max-width: 800px;
+}
+
+.tasks h4{
+    color: var(--cor-cinza);
+    text-transform: capitalize;
+    position: relative;
+    left: 30px;
+}
+
+.tasks h4::before{
+    content: '';
+    height: 15px;
+    width: 15px;
+    background-color: var(--cor-roxa2);
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: -30px;
+    transform: translate(0, -50%);
+}
+
+#tasks-2 h4::before{
+    background-color: var(--cor-azul);
+}
+
+#tasks-3 h4::before{
+    background-color: var(--cor-verde);
+}
+
+
+.tasks-itens{
+    border-radius: 8px;
+    padding: 30px;
+    background-color: var(--cor-cinza-claro);
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.tasks-itens:hover{
+    transform: translate(-2px, -2px);
+    cursor: pointer;
+}
+
+.tasks-itens p{
+    margin-top: 5px;
+    color: var(--cor-cinza);
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+#add-tasks{
+    
+}
+
+@media (max-width: 950px){
+    .tasks{
+        max-width: 150px;
+    }
+    
+    .tasks-itens{
+        font-size: 1.5vw;
+        padding: 10px;
+        min-width: 100px;
+        max-width: 150px;
+    }
+}
+
+
+@media (max-width: 700px){
+    #kaban{
+        padding: 0px 20px 20px 0px;
+        max-width: 200px;
+    }
+    
+    #menu nav{
+        max-width: 200px;
+        font-size: 1em;
+    }
+    
+    #platform-launch header{
+        padding: 10px;
+    }
+    
+    #platform-launch header h1{
+        font-size: 1.2em;
+    }
+    
+    #button-container button{
+        padding: 10px;
+        
+    }
+}
+
+@media (max-width: 450px){
+
+    #tasks-container{
+        flex-wrap: nowrap;
+    }
+
+    #platform-launch header{
+        width: 100vw;
+    }
+
+    .tasks-itens{
+        padding: 10px;
+        min-width: 100px;
+        max-width: 100px;
+        font-size: 1em;
+    }
+
+    .tasks-itens h3{
+        font-size: 0.7em;
+    }
+
+    .tasks-itens p{
+        font-size: .5em;
+    }
+}

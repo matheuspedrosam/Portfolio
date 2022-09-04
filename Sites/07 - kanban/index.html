@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+    <title>Kanban</title>
+</head>
+<body>
+    <main>
+        <section id="kaban">
+            <div id="menu">
+                <div id="logo-container">
+                    <div id="logo"></div>
+                    <h1>Kanban</h1>
+                </div>
+                <p>all boards (9)</p>
+                <nav>
+                    <a href="#">
+                        <div class="menu-links">
+                            <i class="material-symbols-outlined">space_dashboard</i>
+                            Platform Launch
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="menu-links">
+                            <i class="material-symbols-outlined">space_dashboard</i>
+                            Marketing Plan
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="menu-links">
+                            <i class="material-symbols-outlined">space_dashboard</i>
+                            Roadmap
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="menu-links">
+                            <i class="material-symbols-outlined">space_dashboard</i>
+                            +Create New Board
+                        </div>
+                    </a>
+                </nav>
+            </div>
+                <div id="bottom-menu">
+                    <div id="theme">
+                        <i class="material-symbols-outlined">
+                        light_mode
+                        </i>
+                        <div onclick="change_theme()" id="change-theme">
+                            <div id="ball"></div>
+                        </div> 
+                        <i class="material-symbols-outlined">
+                            dark_mode
+                        </i>
+                    </div>
+                    <div onclick="hiddenSidebar()" id="side-bar-hidden" class="menu-links">
+                        <i class="material-symbols-outlined">
+                            visibility_off
+                        </i>
+                        <p>Hide Sidebar</p>
+                    </div>
+                </div>
+            </section>
+            <section id="platform-launch">
+                <header>
+                    <div id="menu-and-platform-container">
+                        <i onclick="showSidebar()" id="platform-launch-menu" class="material-symbols-outlined">
+                            Menu
+                        </i>
+                        <h1>Platform Launch</h1>
+                    </div>
+                    <div id="button-container">
+                        <button>+Add New Task</button>
+                        <span class="material-symbols-outlined">
+                            more_vert
+                        </span>
+                    </div>
+                </header>
+                    <section id="tasks-container">
+                        <div class="tasks" id="tasks-1">
+                            <h4>TODO (4)</h4>
+                            <div class="tasks-itens">
+                                <h3>Build UI for onboarding flow</h3>
+                                <p>0 of 3 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>Build UI for search</h3>
+                                <p>0 of 1 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>Build settings UI</h3>
+                                <p>0 of 2 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>QA and test all major user journeys</h3>
+                                <p>0 of 2 subtracks</p>
+                            </div>
+                        </div>
+                        <div class="tasks" id="tasks-2">
+                            <h4>TODO (4)</h4>
+                            <div class="tasks-itens">
+                                <h3>Build UI for onboarding flow</h3>
+                                <p>0 of 3 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>Build UI for search</h3>
+                                <p>0 of 1 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>Build settings UI</h3>
+                                <p>0 of 2 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>QA and test all major user journeys</h3>
+                                <p>0 of 2 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>Build settings UI</h3>
+                                <p>0 of 2 subtracks</p>
+                            </div>
+                        </div>
+                        <div class="tasks" id="tasks-3">
+                            <h4>TODO (4)</h4>
+                            <div class="tasks-itens">
+                                <h3>Build UI for onboarding flow</h3>
+                                <p>0 of 3 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>Build UI for search</h3>
+                                <p>0 of 1 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>Build settings UI</h3>
+                                <p>0 of 2 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>QA and test all major user journeys</h3>
+                                <p>0 of 2 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>Build settings UI</h3>
+                                <p>0 of 2 subtracks</p>
+                            </div>
+                            <div class="tasks-itens">
+                                <h3>QA and test all major user journeys</h3>
+                                <p>0 of 2 subtracks</p>
+                            </div>
+                        </div>
+                        <div id="add-tasks">
+                        </div>
+                    </section>
+            </section>
+    </main>
+
+    <script src="kaban_scripts.js"></script>
+</body>
+</html>

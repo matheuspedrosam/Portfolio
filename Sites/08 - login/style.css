@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+:root{
+    --cor-verde1: #6cfec4;
+    --cor-verde2: #02f383;
+    --cor-roxo-claro: #524473;
+    --cor-roxo: #2f2645;
+    --cor-roxo-escuro: #1f1b30;
+}
+
+body{
+    min-height: 100vh;
+    background-image: linear-gradient(45deg, var(--cor-roxo-escuro), var(--cor-roxo), var(--cor-roxo-claro));
+    /* background-color: var(--cor-roxo-escuro); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 100vw;
+}
+
+
+#div-container{
+    padding: 100px;
+    display: flex;
+    justify-content: space-around;
+    width: 2000px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1, p{
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-container{
+    margin: 10px;
+}
+
+#img-container img{
+    width: 500px;
+}
+
+#img-container h1{
+    color: var(--cor-verde1);
+    margin-bottom: 50px;
+}
+
+.login{
+    background-color: var(--cor-roxo);
+    width: 500px;
+    margin: 10px;
+    margin-top: 40px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px #00000093;
+}
+
+.login h2{
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-size: 2.2em;
+    color: var(--cor-verde2);
+    margin-bottom: 20px;
+}
+
+.login label{
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.596);
+}
+
+.login input{
+    color: white;
+    margin-top: 8px;
+    background-color: var(--cor-roxo-claro);
+    border: 0;
+    padding: 13px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 4px 8px #1f1b30b0;
+    margin-bottom: 40px;
+}
+
+button{
+    width: 100%;
+    background-color: var(--cor-verde2);
+    color: var(--cor-roxo);
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px #1f1b30;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
+
+button:hover{
+    box-shadow: 0px 0px 3px #02f383;
+}
+
+/* ::placeholder{
+    color: rgba(255, 255, 255, 0.301);
+} */
+
+
+.theme{
+    background-color: var(--cor-roxo-escuro);
+    width: 200px;
+    border-radius: 5px;
+    display: flex;
+    padding: 20px;
+    gap: 0px 5px;
+    justify-content: space-around;
+    color: white;
+    margin: 10px;
+}
+
+#change-theme{
+    width: 50px;
+    background-color: var(--cor-roxo-claro);
+    border-radius: 25px;
+    display: flex;
+    justify-content: flex-end;
+    transition: 0.3s ease-in;
+    align-items: center;
+}
+
+#change-theme:hover{
+    cursor: pointer;
+}
+
+#ball{
+    background-color: white;
+    width: 55%;
+    border-radius: 50%;
+    height: 110%;
+}
+
+
+/* Classes Adicionais  */
+
+.body{
+    background-image: none;
+}
+
+.login2{
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.459);
+}
+
+.login2 label{
+    color: rgba(0, 0, 0, 0.575);
+}
+
+.login2 input{
+    background-color: aliceblue;
+    color: black;
+    box-shadow: 0px 2px 3px #1f1b3059;
+}
+
+.login2 button{
+    box-shadow: 0px 2px 3px #1f1b3059;
+}
+
+.texto{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.616);
+}
+
+.theme2{
+    background-color: rgba(0, 0, 0, 0.13);
+}
+
+.theme2 i{
+    color: black;
+}
+
+
+@media (max-width: 1280px){
+
+    #div-container{
+        justify-content: center;
+    }
+
+    #img-container img{
+        width: 400px;
+    }
+}
+
+@media (max-width: 500px){
+
+    #div-container{
+        justify-content: center;
+        padding: 0px;
+    }
+
+    #img-container img{
+        width: 200px;
+    }
+
+    #img-container h1{
+        font-size: 1.7em;
+    }
+    
+    .login{
+        width: 350px;
+    }
+}
+
+@media (max-width: 375px){
+    .login{
+        width: 270px;
+    }
+
+    #img-container h1{
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 2200px){
+    .theme{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
