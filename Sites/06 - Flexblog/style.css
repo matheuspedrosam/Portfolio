@@ -419,3 +419,23 @@ footer p{
         order: 1;
     }
 }
+
+@media screen and (max-width: 500px){
+
+    #pre-header-container{
+        padding: 10px;
+    }
+
+    #pre-header-container p,a{
+        font-size: .6em; 
+        margin: 0;
+        padding: 0;
+    }
+
+
+    header a{
+        font-size: 0.5em;
+        padding: 0;
+        margin: 0;
+    }
+}
