@@ -52,6 +52,9 @@
                 Conecte-se Comigo
             </button>
         </form>
+        <div class="vanila-tilt" id="img-sessao-principal">
+            <img src="imagens/Firmware-pana.svg" alt="">
+        </div>
     </section>
 
     <section id="infos">
@@ -74,8 +77,8 @@
     </section>
 
     <section id="sobre">
-        <div id="img-sobre">
-            <img src="imagens/—Pngtree—hand holding a cell phone_277632.png" alt="">
+        <div class="vanila-tilt" id="img-sobre">
+            <img src="imagens/Task-bro.svg" alt="">
         </div>
         <div id="div-sobre">
             <h3>Quem é Matheus Pedrosa?</h3>
@@ -214,13 +217,13 @@
     <script src="script.js"></script>
     <script src="Sites/08 - login/vanilla-tilt.babel.js"></script>
     <script type="text/javascript">
-        VanillaTilt.init(document.querySelector(".tecnologias"), {
+        VanillaTilt.init(document.querySelector(".vanila-tilt"), {
             max: 25,
             speed: 400
     });
     
     //It also supports NodeList
-    VanillaTilt.init(document.querySelectorAll(".tecnologias"));
+    VanillaTilt.init(document.querySelectorAll(".vanila-tilt"));
     </script>
 </body>
 </html>

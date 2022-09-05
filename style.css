@@ -145,6 +145,7 @@ header #linkedin{
     justify-content: center;
     max-width: 1200px;
     margin: auto;
+    position: relative;
 }
 
 #sessao-principal h1{
@@ -188,6 +189,13 @@ header #linkedin{
 #sessao-principal form button:hover{
     cursor: pointer;
     box-shadow: 0px 0px 5px var(--cor-roxa);
+}
+
+#img-sessao-principal{
+    width: 500px;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
 }
 
 /* INFOS  */
@@ -362,7 +370,7 @@ header #linkedin{
 }
 
 .tecnologias:hover{
-    transform: translate(-2px, -2px);
+    transform: translate(0px, -2px);
     transition: 0.2s;
 }
 
@@ -642,7 +650,33 @@ footer .fa-brands{
     font-size: 20px;
 }
 
+@media screen and (max-width: 1130px){
+    #img-sessao-principal{
+        width: 335px;
+    }
+}
+
+@media screen and (max-width: 931px) {
+    #img-sobre{
+        order: 1;
+    }
+
+    #sobre{
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 851px){
+    #img-sessao-principal{
+        width: 280px;
+    }
+}
+
 @media screen and (max-width: 800px) {
+    #img-sessao-principal{
+        display: none;
+    }
+
     #menu-container{
         display: flex;
         justify-content: space-between;
@@ -684,15 +718,5 @@ footer .fa-brands{
         padding-left: 10px;
         padding-right: 10px;
         margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 931px) {
-    #img-sobre{
-        order: 1;
-    }
-
-    #sobre{
-        gap: 50px;
     }
 }
