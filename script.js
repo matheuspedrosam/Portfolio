@@ -19,6 +19,20 @@ function ajeitarMenu(){
         imagem_menu.style.display = 'none'
         header.style.display = 'flex'
         menu_hamburguer.innerHTML = 'close'
+    } else{
+        menu_hamburguer.innerHTML = 'menu'
+        header.style.display = 'none'
+        imagem_menu.style.display = 'block'
+    }
+}
+
+function subirMenu(){
+    if (window.innerWidth <= 800){
+        if (header.style.display == 'flex'){
+            header.style.display = 'none'
+            menu_hamburguer.innerHTML = 'menu'
+            imagem_menu.style.display = 'block'
+        }
     }
 }
 

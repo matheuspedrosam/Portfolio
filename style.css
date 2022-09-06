@@ -317,9 +317,9 @@ header #linkedin{
 }
 
 .projetos:hover{
-    transform: translate(-2px, -2px);
-    transition: 0.2s;
-    box-shadow: 0px 0px 20px 1px var(--cor-roxa);
+    transform: translate(0px, -5px);
+    transition: 0.3s;
+    box-shadow: 0px 0px 4px 2px var(--cor-roxa);
     cursor: pointer;
 }
 
@@ -370,7 +370,6 @@ header #linkedin{
 }
 
 .tecnologias:hover{
-    transform: translate(0px, -2px);
     transition: 0.2s;
 }
 
@@ -730,5 +729,17 @@ footer .fa-brands{
 @media (max-width: 300px){
     #img-sobre img{
         width: 200px;
+    }
+}
+
+@media (min-width: 800px){
+    header{
+        position: fixed;
+        z-index: 999;
+        background-color: white;
+        margin-top: -8px;
+        width: 100vw;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 }
