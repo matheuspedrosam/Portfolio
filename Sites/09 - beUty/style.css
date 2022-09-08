@@ -78,7 +78,6 @@ span.material-icons{
 
 .header-container nav a:hover{
     position: relative;
-    left: -2px;
     top: -2px;
 }
 
@@ -261,8 +260,28 @@ footer #b-logo{
     padding: 10px 13px 10px 13px;
 }
 
-.footer-container-2 i:hover{
-    background-color: var(--cor-roxa);
+.fa-facebook-f:hover{
+    background-color: #3b5998;
+}
+
+.fa-twitter:hover{
+    background-color: #00acee;
+}
+
+.fa-google:hover{
+    background-color: #db4a39;
+}
+
+.fa-instagram:hover{
+    background-color: #E1306C;
+}
+
+.fa-linkedin-in:hover{
+    background-color: #0072b1;
+}
+
+.fa-github:hover{
+    background-color: #333;
 }
 
 @media (max-width: 865px){
