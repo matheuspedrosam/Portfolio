@@ -7,7 +7,6 @@
     --font-secundaria: 'Nunito', 'sans-serif';
     /* --font-logo: 'Monoton', 'cursive'; */
     --font-logo: 'Ms Madi', 'cursive';
-
     --cor-roxa: #736EF5;
     --cor-cinza: #4B4B4B;
     --cor-roxa-section: #7269FA;
@@ -161,10 +160,6 @@ span.material-icons{
 .section-principal-2 #section-principal-img{
     order: -1;
     margin-right: 30px;
-}
-
-.section-principal-2 #section-principal-img img{
-    /* width: 90%; */
 }
 
 .section-principal-3{
