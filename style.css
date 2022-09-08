@@ -542,7 +542,9 @@ footer a:hover{
     padding: 30px;
 }
 
-.seta{display: none;}
+span.seta{
+    display: none;
+}
 
 
 @media screen and (max-width: 500px){
