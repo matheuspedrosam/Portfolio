@@ -1,11 +1,12 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Ms+Madi&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
     --font-principal: 'Roboto', 'sans-serif';
     --font-secundaria: 'Nunito', 'sans-serif';
-    --font-logo: 'Monoton', 'cursive';
+    /* --font-logo: 'Monoton', 'cursive'; */
+    --font-logo: 'Ms Madi', 'cursive';
 
     --cor-roxa: #736EF5;
     --cor-cinza: #4B4B4B;
@@ -62,8 +63,8 @@ span.material-icons{
 #b-logo{
     border: 1px solid #000000;
     border-radius: 5px;
-    padding: 0px 12px 0px 12px;
-    font-weight: 400;
+    padding: 0px 15px 0px 12px;
+    font-weight: bold;
     font-family: var(--font-logo);
     font-size: 45px;
     margin-right: 5px;
@@ -203,6 +204,10 @@ footer .header-logo{
     display: flex;
     flex-direction: column;
     color: white;
+}
+
+footer #b-logo{
+    font-weight: 400;
 }
 
 .footer-container{

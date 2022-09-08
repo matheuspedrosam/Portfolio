@@ -26,37 +26,17 @@ function ajeitarMenu(){
     }
 }
 
+
 function subirMenu(){
     if (window.innerWidth <= 800){
         if (header.style.display == 'flex'){
             header.style.display = 'none'
             menu_hamburguer.innerHTML = 'menu'
             imagem_menu.style.display = 'block'
-        }
+        } 
     }
 }
 
 function alertaBotao(){
     window.alert('Ainda em Desenvolvimento...')
-}
-
-
-if (window.innerWidth >= 1350){
-    var seta = document.querySelector('.seta')
-    window.addEventListener('scroll', () =>{
-        if (window.scrollY >= 300){
-            seta.style.display = 'block'
-        } else{
-            seta.style.display = 'none'
-        }
-    })
-}
-
-
-function subirTela(){
-    window.scrollTo({
-        left: 0,
-        top: 0,
-        behavior: "smooth"
-    })
 }
