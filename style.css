@@ -16,6 +16,10 @@
     font-family: var(--font-roboto);
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
     --font-roboto: 'Roboto', 'sans-serif';
     --cor-cinza: #797e9c;
@@ -319,7 +323,7 @@ header #linkedin{
 .projetos:hover{
     transform: translate(0px, -5px);
     transition: 0.3s;
-    box-shadow: 0px 0px 4px 2px var(--cor-roxa);
+    border-bottom: 6px solid aquamarine;
     cursor: pointer;
 }
 
