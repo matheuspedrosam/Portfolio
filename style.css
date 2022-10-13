@@ -549,6 +549,10 @@ footer a:hover{
 
 @media screen and (max-width: 500px){
 
+    body{
+        margin: 0;
+    }
+    
         /* Header Animations  */
 
     header #img-logo{
@@ -646,6 +650,10 @@ footer a:hover{
         width: 42vw;
         text-align: left;
         font-size: 0.8em;
+    }
+
+    #contato{
+        padding-bottom: 0px;
     }
 }
 

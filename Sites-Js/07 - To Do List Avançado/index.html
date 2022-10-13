@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanced To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="title-container">
+            <h1>Todo Avançado</h1>
+        </section>
+
+        <section class="add-task-container">
+            <h3>Adicione sua tarefa</h3>
+            <input onkeyup="enviarTarefa(event)" id="task-input" type="text" placeholder="O que você vai fazer?">
+            <button onclick="adicionarTarefa()" id="add-task-btn">+</button>
+        </section>
+
+        <section class="edit-task-container hide">
+            <h3>Edite Sua Tarefa</h3>
+            <div class="edit-task-input-container">
+                <input onkeyup="EnviarEdicao(event)" id="edit-task-input" type="text" placeholder="Digite o novo valor">
+                <button onclick="realizarEdicao()" id="edit-task-btn"><i class="material-icons">done</i></button>
+            </div>
+            <button onclick="finishEdit()" class="btn-cancelar">Cancelar</button>
+        </section>
+
+        <section class="find-and-filter-container">
+            <div class="find-container">
+                <h3>Pesquisar:</h3>
+                <div class="input-find-container">
+                    <input onkeyup="enviarFind(event)" id="find-input" type="text" placeholder="Buscar...">
+                    <button onclick="findTask()">
+                        <i class="material-icons backspace">
+                            search
+                        </i>
+                    </button>
+                    <button onclick="cleanFindTask()">
+                        <i class="material-icons backspace">
+                            backspace
+                        </i>
+                    </button>
+                </div>
+            </div>  
+            <div class="filter-container">
+                <h3>Filtrar:</h3>
+                <select onchange="realizarFiltragem()" id="filter-select">
+                    <option value="Todas">Todas</option>
+                    <option value="Feitas">Feitas</option>
+                    <option value="Finalizads">A Fazer</option>
+                </select>
+            </div>
+        </section>
+        <section class="task-escondida-para-clonar hide">
+            <div class="task hide2">
+                <p>Test</p>
+                <div class="icons-area">
+                    <button onclick="finalizarTask(this)" id="done">
+                        <i class="material-icons">
+                            done
+                        </i>
+                    </button>
+                    <button onclick="editarTask(this)" id="edit">
+                        <i class="material-icons">
+                            edit
+                        </i>
+                    </button>
+                    <button onclick="excluirTask(this)" id="close">
+                        <i class="material-icons">
+                            close
+                        </i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="results-container">
+        </section>
+    <section class="btn-clean-all-container hide">
+        <button id="btn-clean-all">Apagar Todas</button>
+    </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

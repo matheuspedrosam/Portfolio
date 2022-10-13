@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 98vh;
+}
+
+.container-slide{
+    height: 50vh;
+    width: 50vw;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    box-shadow: 0px 20px 30px black;
+    overflow-x: hidden;
+}
+
+
+.container-itens{
+    display: flex;
+    border-radius: 20px;
+    height: 50vh;
+    position: relative;
+}
+
+.container-itens .itens{
+    height: 50vh;
+    width: 50vw;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.container-itens:first-child{
+    margin-left: -100%;
+}
+
+.itens img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#prev{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    font-size: 25px;
+}
+
+#prev:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+#next{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    font-size: 25px;
+}
+
+#next:hover{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+.bolinhas-container{
+    position: relative;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.bolinhas{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    /* background-color: black; */
+    border: 1px solid rgb(202, 202, 202);
+    transition: 1s;
+}
+
+.selected{
+    background-color: black;
+}
+
+@media (max-width: 1100px) {
+    .container-slide{
+        width: 90vw;
+    }
+
+    .container-itens .itens{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 500px){
+    .container-slide{
+        height: 25vh;
+    }
+
+    .container-itens{
+        height: 25vh;
+    }
+
+    .container-itens .itens{
+        height: 25vh;
+    }
+
+    .bolinhas-container{
+        top: 45%;
+    }
+}
