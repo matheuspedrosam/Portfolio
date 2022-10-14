@@ -12,6 +12,7 @@ body{
 }
 
 .calculator-container{
+    user-select: none;
     border-radius: 10px 10px 0px 0px;
     background-color: black;
     color: white;
@@ -33,6 +34,7 @@ body{
     font-size: 70px;
     text-align: right;
     word-wrap: break-word;
+    user-select: text;
 }
 
 .btns-containers{

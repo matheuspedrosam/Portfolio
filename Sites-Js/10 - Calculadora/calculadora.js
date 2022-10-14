@@ -21,8 +21,7 @@ let resultValue = 0
 
 for (botoes of btns){
     botoes.addEventListener('click', (e) => {
-        audio.currentTime = 0.06
-        audio.play()
+        tirarAudioCelular()
         let atr = e.target.innerHTML
         if (isFirstValue === false){
             getFirstValue(atr)
@@ -130,3 +129,12 @@ clear.addEventListener('click', () => {
     sign = ''
     resultValue = 0
 })
+
+
+
+function tirarAudioCelular(){
+    if (window.innerWidth > 500){
+        audio.currentTime = 0.2
+        audio.play()
+    }
+}
