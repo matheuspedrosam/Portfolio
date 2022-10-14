@@ -302,11 +302,19 @@ header #linkedin{
     font-weight: lighter;
 }
 
-#projetos-container{
+.projetos-container-html-css{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
+.projetos-container-js{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 
 .projetos{
     display: flex;
@@ -341,6 +349,11 @@ header #linkedin{
     margin: 0;
     max-width: 300px;
     order: -1;
+}
+
+.calculadora h2, .darkmode h2, .slideshow h2{
+    margin-top: 51px;
+    margin-bottom: 51px;
 }
 
 /* SKILLS  */
