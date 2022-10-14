@@ -13,7 +13,6 @@ body{
 }
 
 .relogio-container{
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.63);
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -23,6 +22,7 @@ body{
     max-width: 750px;
     padding: 20px;
     border-radius: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.63);
 }
 
 .horas{
@@ -40,4 +40,31 @@ body{
 
 .horas h1{
     font-size: 5em;
+}
+
+@media (max-width: 640px) {
+    .relogio-container{
+        gap: 5px;
+    }
+    .horas h1 {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 500px){
+    .horas{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 390px){
+    .horas{
+        width: 120px;
+        height: 120px;
+    }
+
+    .horas h1 {
+        font-size: 3em;
+    }
 }
