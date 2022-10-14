@@ -94,7 +94,10 @@ form button:focus{
 }
 
 .inputs-containers .fail{
+    position: relative;
     border: 2px solid #e74c3c;
+    animation-name: snaker;
+    animation-duration: .5s;
 }
 
 .inputs-containers .fail .material-symbols-outlined{
@@ -139,4 +142,10 @@ form button:focus{
 @keyframes modal{
     0%{top: 0%;}
     100%{top: 50%;}
+}
+
+@keyframes snaker{
+    25%{left: 2px;}
+    50%{left: -2px;}
+    75%{left: 2px;}
 }
