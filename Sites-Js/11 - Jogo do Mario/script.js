@@ -6,20 +6,27 @@ const clouds = qs('.clouds')
 const modal_container = qs('.modal-container')
 const score_span = qs('.result')
 const pontuacao_span = qs('.pontuacao')
+const recorde = qs('.recorde')
+recorde.innerHTML = +localStorage.getItem('recorde')
 let score = 0
 let loop;
 let scoreTime;
+let tempo = 1500
 
-if (window.innerWidth <= 500){
-    qs('.aviso').classList.remove('hide')
-    document.addEventListener('click', () => {
-        mario.classList.add('jump')
-        
-        setTimeout(() => {
-            mario.classList.remove('jump')
-        }, 500) 
-    })
+function verificarCompatibilidade(){
+    if (window.innerWidth <= 500){
+        qs('.aviso').classList.remove('hide')
+        document.addEventListener('click', () => {
+            mario.classList.add('jump')
+            
+            setTimeout(() => {
+                mario.classList.remove('jump')
+            }, 500) 
+        })
+        tempo = 800
+    }
 }
+verificarCompatibilidade()
 
 
 document.addEventListener('keydown', (e) => {
@@ -62,7 +69,17 @@ function rodarJogo(){
 
         clearInterval(loop)
         clearInterval(scoreTime)
-        clearTimeout(btns_display)
+
+        let recorde = localStorage.getItem('recorde')
+        cl(recorde)
+        if (Number(recorde)){
+            if (recorde < score){
+                localStorage.setItem('recorde', String(score))
+            }
+        } else{
+            localStorage.setItem('recorde', String(score))
+        }
+
     }
 }
 
@@ -73,7 +90,7 @@ function contarPontos(){
 }
 
 loop = setInterval(rodarJogo, 1)
-scoreTime = setInterval(contarPontos, 1500)
+scoreTime = setInterval(contarPontos, tempo)
 
 
 function pausar(){

@@ -140,6 +140,22 @@ body{
     color: #0072b1;
 }
 
+.recorde_container{
+    /* font-family: 'Nabla'; */
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 25px;
+    position: absolute;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    left: 40px;
+    top: 15px;
+}
+
+.recorde{
+    font-size: 30px;
+}
+
 
 .sobre-mim-container{
     background-color: #151515;
@@ -222,16 +238,40 @@ body{
 }
 
 .aviso{
+    margin-top: 4px;
     font-size: 12px;
     text-align: center;
 }
 
 @media (max-width: 500px) {
-    .sobre-mim-container{
-        font-size: 1em;
-    }
     body{
         overflow: auto;
+    }
+
+    .modal{
+        width: 350px;
+    }
+
+    .pipe{
+        animation: pipe-animation 0.8s infinite linear;
+    }
+
+    .game-board h1{
+        font-size: 40px;
+        right: 10px;
+    }
+
+    .recorde_container{
+        top: 20px;
+        left: 10px;
+        font-size: 20px;
+    }
+    .recorde{
+        font-size: 20px;
+    }
+    .sobre-mim-container{
+        font-size: 0.9em;
+        border-radius: 20px 20px 0px 0px;
     }
 }
 
