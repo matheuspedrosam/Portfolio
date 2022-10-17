@@ -33,16 +33,17 @@ for (botoes of btns){
 }
 
 function getFirstValue(el){
-    if (Number(el)){
+    if (Number(el) || el == 0){
         display_result.innerHTML = ''
         firstValue += el
         display_result.innerHTML = firstValue
         firstValue = +firstValue
+        cl(firstValue)
     }
 }
 
 function getSecondValue(el){
-    if (Number(el)){
+    if (Number(el) || el == 0){
         if (firstValue != '' && sign != ''){
             secondValue += el
             display_result.innerHTML = secondValue
