@@ -351,7 +351,7 @@ header #linkedin{
     order: -1;
 }
 
-.calculadora h2, .darkmode h2, .slideshow h2{
+.calculadora h2, .darkmode h2, .slideshow h2, .rd-e-mario h2{
     margin-top: 51px;
     margin-bottom: 51px;
 }
@@ -657,6 +657,11 @@ footer a:hover{
 
     .projetos img{
         width: 160px;
+    }
+
+    .rd-e-mario h2{
+        margin-top: 0px;
+        margin-bottom: 16px;
     }
 
     .tecnologias{
