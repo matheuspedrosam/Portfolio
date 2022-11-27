@@ -11,6 +11,42 @@
     <title>BeUty</title>
 </head>
 <body onresize="ajeitarMenu()">
+
+    <div class="modal hide">
+        <div class="modal-container modal-container-login">
+            <h1>Login</h1>
+
+            <label for="login">Nome:</label> <br>
+            <input id="login" type="text"> <br>
+            <label for="senha">Senha:</label> <br>
+            <input id="senha" type="password"> <br>
+            <div class="modal-btns-container">
+                <button onclick="fechar_modal()">Cancelar</button>
+                <button onclick="verificar_login()">Enviar</button>
+            </div>
+
+            <p>Não possui cadastro? <span id="cadastro">clique aqui</span></p>
+        </div>
+        <div class="modal-container modal-container-cadastro hide">
+            <h1>Cadastre-se</h1>
+
+            <label for="login2">Nome:</label> <br>
+            <input id="login2" type="text"> <br>
+            <label for="email">Email:</label> <br>
+            <input id="email" type="email"> <br>
+            <label for="senha2">Senha:</label> <br>
+            <input id="senha2" type="password"> <br>
+            <label for="confirmarsenha">Confirmar Senha:</label> <br>
+            <input id="confirmarsenha" type="password"> <br>
+            <div class="modal-btns-container">
+                <button onclick="fechar_modal()">Cancelar</button>
+                <button onclick="verificar_cadastro()">Enviar</button>
+            </div>
+
+            <p>Já possui cadastro? <span id="login_btn">clique aqui</span></p>
+        </div>
+        
+    </div>
     
     
     <header>
@@ -27,7 +63,7 @@
                 <a href="#">Mercados</a>
                 <a href="#">Franquias</a>
                 <a href="#">Quem Somos</a>
-                <a href="#">Login</a>
+                <a href="" onclick="login(event)">Login</a>
                 <a href="#" id="contato" class="button">Contato</a>
             </nav>
         </div>
@@ -51,7 +87,7 @@
             <div id="section-principal-texto">
                 <h1>Fortaleça sua presença online</h1>
                 <p>Esteja disponível nos apps de serviço como Next e Picpay, além da visibilidade nas redes sociais. Facilite o agendamento de quem te busca e amplie as vendas</p>
-                <button class="button button-principal">Saba mais</button>
+                <a href="saiba_mais.html"><button class="button button-principal">Saba mais</button></a>
             </div>
             <div id="section-principal-img" class="vanila-tilt">
                 <img src="imagens/Marketing-cuate.svg" alt="">
@@ -148,6 +184,7 @@
 
 
     <script src="script.js"></script>
+    <script src="scripts-login.js"></script>
     <script src="vanilla-tilt.babel.js"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelector(".vanila-tilt"), {

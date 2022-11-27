@@ -14,6 +14,14 @@
     --cor-escura: #161C27;
 }
 
+button{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -25,75 +33,6 @@
 h1, p{
     margin-top: 16px;
     margin-bottom: 16px;
-}
-
-.hide{
-    display: none !important;
-}
-
-.overflow{
-    overflow: hidden;
-}
-
-.modal{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.568);
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-container{
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 20px 30px black;
-}
-
-.modal-container h1{
-    text-align: center;
-}
-
-.modal-container input{
-    padding: 3px;
-    width: 100%;
-    margin-bottom: 30px;
-    border: 1px solid black;
-    border-radius: 4px;
-}
-
-.modal-btns-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.modal-container button{
-    padding: 8px;
-    border-radius: 10px;
-    width: 100px;
-    background-color: var(--cor-roxa);
-    color: white;
-    border: 1px solid white;
-}
-
-.modal-container button:hover{
-    cursor: pointer;
-    background-color: white;
-    color: var(--cor-roxa);
-    border: 1px solid var(--cor-roxa);
-}
-
-.modal-container span{
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.modal-container span:hover{
-    text-decoration: underline;
 }
 
     /* HEADER  */
@@ -181,7 +120,7 @@ span.material-icons{
     margin: auto;
     display: flex;
     max-width: 960px;
-    padding: 100px 10px 100px 10px;
+    padding: 170px 10px 170px 10px;
     /* background-color: green; */
     align-items: center;
     justify-content: center;
@@ -195,11 +134,13 @@ span.material-icons{
 
 #section-principal-texto h1{
     color: var(--cor-roxa);
-    font-size: 3.1em;
+    font-size: 3.3em;
+    line-height: 1.1;
 }
 
 #section-principal-texto p{
-    font-size: 1.2em;
+    font-size: 1.31em;
+    
 }
 
 .button-principal{
@@ -220,44 +161,184 @@ span.material-icons{
     margin: auto;
 }
 
-.section-principal-2 #section-principal-texto{
-    padding-right: 0;
-    margin-left: 30px;
+
+#section-2{
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.section-principal-2 #section-principal-img{
-    order: -1;
-    margin-right: 30px;
-}
-
-.section-principal-3{
-    background-color: var(--cor-roxa-section);
-    color: white;
-}
-
-.section-principal-3 #section-principal-texto{
-    margin-right: 30px;
-    padding-right: 0px;
-}
-
-.section-principal-3 #section-principal-img{
-    margin-left: 30px;
-}
-
-.section-principal-3 #section-principal-texto h1{
-    color: white;
-}
-
-.section-principal-3 .button{
-    background-color: white;
+#section-2 h1{
     color: var(--cor-roxa);
-    border: 1px solid white;
+    font-size: 2.1em;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-.section-principal-3 .button:hover{
-    background-color: var(--cor-roxa-section);
-    color: white
+.btns-container{
+    background-color: #f8f8f8;
+    width: 100%;
+    display: flex;
+    border-radius: 50px;
+    padding: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
+
+.btns-container button{
+    width: 170px;
+    padding: 10px 10px;
+    border-radius: 30px;
+    border: 1px solid #f8f8f8;
+    font-weight: bold;
+    font-size: 1em;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btns-container button:hover{
+    color: var(--cor-roxa);
+    border: 1px solid var(--cor-roxa);
+}
+
+.btns-container .btns-conteudo-active{
+    background-color: var(--cor-roxa);
+    color: white;
+}
+
+.btns-container .btns-conteudo-active:hover{
+    color: white;
+}
+
+.conteudo-container{
+    display: flex;
+    max-width: 960px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.conteudo-container-img{
+    max-width: 500px;
+}
+
+.conteudo-container-img img{
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.conteudo-container-txt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 240px;
+    margin-left: 80px;
+}
+
+.conteudo-container-txt h2{
+    color: var(--cor-roxa);
+    font-size: 2em;
+}
+
+.conteudo-container-txt p{
+    font-size: 1.07em;
+}
+
+.btn-comece-a-vender{
+    width: 220px;
+    padding: 15px;
+    border-radius: 30px;
+    background-color: var(--cor-roxa);
+    border: 1px solid var(--cor-roxa);
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 40px;
+}
+
+.btn-comece-a-vender:hover{
+    background-color: white;
+    border: 1px solid var(--cor-roxa);
+    color: var(--cor-roxa);
+}
+
+
+#section-3{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'box1 box2 box2 box3'
+    'box1 box4 box5 box3';
+}
+
+#section-3 .box{
+    height: 100%;
+    width: 100%;
+}
+
+#section-3 .box img{
+    min-width: 150px;
+    display: block;
+    max-width: 100%;
+}
+
+#section-3 .box:nth-child(1){
+    grid-area: box1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEBFF;
+    color: #736ef5;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.4em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#section-3 .box:nth-child(2){
+    grid-area: box2;
+}
+
+
+#section-3 .box:nth-child(3){
+    grid-area: box3;
+}
+
+#section-3 .box:nth-child(4){
+    grid-area: box4;
+}
+
+#section-3 .box:nth-child(5){
+    grid-area: box5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EDEBFF;
+    color: #736ef5;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 1.4em;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 footer{
     background-color: var(--cor-preta);
@@ -356,6 +437,7 @@ footer #b-logo{
 @media (max-width: 865px){
     #header-logo-1{
         display: block;
+        cursor: pointer;
     }
     header{
         display: flex;
@@ -391,6 +473,17 @@ footer #b-logo{
         margin-top: 20px;
         margin-left: 0px;
         padding: 15px 10px;
+    }
+}
+
+@media (max-width: 860px){
+    .conteudo-container-txt{
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    #section-3{
+        display: none;
     }
 }
 
