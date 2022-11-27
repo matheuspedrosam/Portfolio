@@ -138,14 +138,20 @@ span.material-icons{
     margin-right: 5px;
 }
 
-.header-container nav a{
+.header-container nav p{
+    display: inline;
+    cursor: pointer;
+    margin: 0;
+}
+
+.header-container nav a, .header-container nav p{
     text-decoration: none;
     color: var(--cor-cinza);
     font-weight: 600;
     padding: 15px 20px 15px 20px;
 }
 
-.header-container nav a:hover{
+.header-container nav a:hover, .header-container nav p:hover{
     position: relative;
     top: -2px;
 }
