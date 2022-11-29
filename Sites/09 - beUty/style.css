@@ -35,15 +35,23 @@ h1, p{
     overflow: hidden;
 }
 
+@keyframes modal-animation{
+    from{
+        top: 0%;
+    } to {
+        top: 50%;
+    }
+}
+
 .modal{
     position: absolute;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.568);
     z-index: 100;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .modal-container{
@@ -51,6 +59,12 @@ h1, p{
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0px 20px 30px black;
+    max-width: 300px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    animation: modal-animation .8s ease-in-out;
 }
 
 .modal-container h1{
@@ -414,6 +428,7 @@ footer #b-logo{
         order: -1;
         margin-bottom: 20px;
     }
+
     #section-principal-img img{
         width: 80%;
     }

@@ -34,13 +34,20 @@ btn_login.addEventListener('click', () => {
 // Verificações
 
 // Login
+const login1 = qs('#login')
 const senha = qs('#senha')
 // Cadastro
+const login2 = qs('#login2')
 const senha2 = qs('#senha2')
 const confirmarsenha = qs('#confirmarsenha')
 const email = qs('#email')
 
 function verificar_login(){
+    if (login1.value == '' || senha.value == ''){
+        window.alert('todos os campos são obrigatórios!')
+        return
+    }
+
     if (senha.value.length < 7){
         window.alert('A senha precisa ter no mínimo 7 caracteres')
     } else{
@@ -50,6 +57,11 @@ function verificar_login(){
 }
 
 function verificar_cadastro(){
+    if (login2.value == '' || senha2.value == '' || confirmarsenha.value == '' || email.value == ''){
+        window.alert('todos os campos são obrigatórios!')
+        return
+    }
+
     if (senha2.value.length < 7){
         window.alert('A senha precisa ter no mínimo 7 caracteres')
     } else if (senha2.value !== confirmarsenha.value){
