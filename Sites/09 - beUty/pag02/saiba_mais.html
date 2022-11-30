@@ -10,9 +10,48 @@
     <link rel="stylesheet" href="style_saiba_mais.css">
 </head>
 <body onresize="ajeitarMenu()">
+
+    <!-- MODAL LOGIN -->
+
+    <div class="modal hide">
+        <div class="modal-container modal-container-login">
+            <h1>Login</h1>
+
+            <label for="login">Nome:</label> <br>
+            <input required id="login" type="text"> <br>
+            <label for="senha">Senha:</label> <br>
+            <input required id="senha" type="password"> <br>
+            <div class="modal-btns-container">
+                <button onclick="fechar_modal()">Cancelar</button>
+                <button onclick="verificar_login()">Enviar</button>
+            </div>
+
+            <p>Não possui cadastro? <span id="cadastro">clique aqui</span></p>
+        </div>
+        <div class="modal-container modal-container-cadastro hide">
+            <h1>Cadastre-se</h1>
+
+            <label for="login2">Nome:</label> <br>
+            <input required id="login2" type="text"> <br>
+            <label for="email">Email:</label> <br>
+            <input required id="email" type="email"> <br>
+            <label for="senha2">Senha:</label> <br>
+            <input required id="senha2" type="password"> <br>
+            <label for="confirmarsenha">Confirmar Senha:</label> <br>
+            <input required id="confirmarsenha" type="password"> <br>
+            <div class="modal-btns-container">
+                <button onclick="fechar_modal()">Cancelar</button>
+                <button onclick="verificar_cadastro()">Enviar</button>
+            </div>
+
+            <p>Já possui cadastro? <span id="login_btn">clique aqui</span></p>
+        </div>
+    </div>
         
+    <!-- HEADER -->
+
     <header>
-        <a href="index.html">
+        <a href="../index.html">
             <div id="header-logo-1">
                 <div class="header-logo"><span id="b-logo">B</span> BeUty</div>
             </div>
@@ -21,7 +60,7 @@
             menu
         </span>
         <div class="header-container">
-            <a href="index.html">
+            <a href="../index.html">
                 <div class="header-logo"><span id="b-logo">B</span> BeUty</div>
             </a>
             <nav>
@@ -29,11 +68,13 @@
                 <a href="#">Mercados</a>
                 <a href="#">Franquias</a>
                 <a href="#">Quem Somos</a>
-                <a href="#">Login</a>
+                <a href="" onclick="login(event)">Login</a>
                 <a href="#" id="contato" class="button">Contato</a>
             </nav>
         </div>
     </header>
+
+    <!-- SECTION 1 -->
 
     <section class="section-principal-1">
         <div class="section-principal-container">
@@ -43,10 +84,12 @@
                 <a href="saiba_mais.html"><button class="button button-principal">Comece agora</button></a>
             </div>
             <div id="section-principal-img" class="vanila-tilt">
-                <img src="imagens/Marketing-cuate.svg" alt="">
+                <img src="../imagens/Marketing-cuate.svg" alt="">
             </div>
         </div>
     </section>
+
+    <!-- SECTION 2 -->
 
     <section class="section-principal-1">
         <div class="section-principal-container" id="section-2">
@@ -58,7 +101,7 @@
             </div>
             <div class="conteudo-container">
                 <div class="conteudo-container-img">
-                    <img src="imagens/email-conteudo.png" alt="">
+                    <img src="../imagens/email-conteudo.png" alt="">
                 </div>
                 <div class="conteudo-container-txt">
                     <h2>Campanhas de Marketing</h2>
@@ -72,24 +115,28 @@
         </div>
     </section>
 
+    <!-- SECTION 3 -->
+
     <section class="section-principal-1">
         <div class="section-principal-container" id="section-3">
             <div class="box">
                 <p>Grandes estabelecimentos que usam BeUty atraem mais clientes</p>
             </div>
             <div class="box">
-                <img src="imagens/grid-homem.png" alt=""></div>
+                <img src="../imagens/grid-homem.png" alt=""></div>
             <div class="box">
-                <img style="width: 223px;" src="imagens/grid-mulher.png" alt="">
+                <img style="width: 223px;" src="../imagens/grid-mulher.png" alt="">
             </div>
             <div class="box">
-                <img src="imagens/grid-tatuagem.png" alt="">
+                <img src="../imagens/grid-tatuagem.png" alt="">
             </div>
             <div class="box">
                 <p>5.000<br>novos clientes por mês</p>
             </div>
         </div>
     </section>
+
+    <!-- FOOTER 1 -->
 
     <footer>
         <div class="footer-container">
@@ -115,9 +162,7 @@
         </div>
     </footer>
 
-    <section>
-
-    </section>
+    <!-- FOOTER 2 -->
 
     <footer class="footer-2">
             <div class="footer-container-2">
@@ -132,5 +177,6 @@
 
 
     <script src="script_saiba_mais.js"></script>
+    <script src="../scripts-login.js"></script>
 </body>
 </html>

@@ -52,21 +52,21 @@ btns_container.addEventListener('click', ({target})=>{
         target.classList.add('btns-conteudo-active')
         switch(botao_alvo){
             case 'email':
-                alterarElementosRecursos('imagens/email-conteudo.png', '100%', 'Campanhas de Marketing')
+                alterarElementosRecursos('../imagens/email-conteudo.png', '100%', 'Campanhas de Marketing')
                 container_text.innerHTML += `
                 <p>
                     Atraia clientes com campanhas de SMS e e-mail. Marketing com resultados, elaborado para fidelizar o seu público. Automatize a comunicação sem perder a exclusividade.
                 </p>`
                 break
             case 'apps':
-                alterarElementosRecursos('imagens/apps-servico.png', '61%', 'Visibilidade em apps de serviço')
+                alterarElementosRecursos('../imagens/apps-servico.png', '61%', 'Visibilidade em apps de serviço')
                 container_text.innerHTML += `
                 <p>
                     Esteja onde seu consumidor está: em  Apps como Livelo e PicPay, além do BeUtyApp. Todos os serviços que seu espaço oferece disponíveis em um clique. Cientes online e prontos para agendar.
                 </p>`
                 break
             case 'redes':
-                alterarElementosRecursos('imagens/redes-sociais.png', '53%', 'Agendamento por redes sociais')
+                alterarElementosRecursos('../imagens/redes-sociais.png', '53%', 'Agendamento por redes sociais')
                 container_text.innerHTML += `
                 <p>
                     Deixe acessível a agenda do seu espaço no Instagram e Facebook. Conecte-se ao seu cliente com facilidade. Estratégias multiplataforma para atrair agendamento. Conquiste presença online para vender mais.
