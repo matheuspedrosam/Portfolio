@@ -304,14 +304,15 @@ header #linkedin{
 
 .projetos-container-html-css{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
 .projetos-container-js{
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
