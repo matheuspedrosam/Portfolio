@@ -453,6 +453,18 @@ header #linkedin{
     box-shadow: 0px 0px 8px red;
 }
 
+.git{
+    border-top: 2px solid #F05033;
+}
+
+.git i{
+    color: #F05033;
+}
+
+.git:hover{
+    box-shadow: 0px 0px 8px #F05033;
+}
+
 .sql{
     border-top: 2px solid mediumseagreen;
 }
@@ -463,6 +475,66 @@ header #linkedin{
 
 .sql:hover{
     box-shadow: 0px 0px 8px mediumseagreen;
+}
+
+.figma{
+    border-top: 2px solid #ff007f;
+}
+
+.figma i{
+    color: #ff007f;
+}
+
+.figma:hover{
+    box-shadow: 0px 0px 8px #ff007f;
+}
+
+.node{
+    border-top: 2px solid #80BD41;
+}
+
+.node i{
+    color: #80BD41;
+}
+
+.node:hover{
+    box-shadow: 0px 0px 8px #80BD41;
+}
+
+.react{
+    border-top: 2px solid #4AD5FF;
+}
+
+.react i{
+    color: #4AD5FF;
+}
+
+.react:hover{
+    box-shadow: 0px 0px 8px #4AD5FF;
+}
+
+.bootstrapt{
+    border-top: 2px solid #8B0BFC;
+}
+
+.bootstrapt i{
+    color: #8B0BFC;
+}
+
+.bootstrapt:hover{
+    box-shadow: 0px 0px 8px #8B0BFC;
+}
+
+.wordpress{
+    border-top: 2px solid #21759b;
+}
+
+.wordpress i{
+    color: #21759b;
+}
+
+.wordpress:hover{
+    box-shadow: 0px 0px 8px #21759b;
 }
 
 /* FOOTER  */
