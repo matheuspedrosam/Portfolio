@@ -20,6 +20,10 @@ html{
     scroll-behavior: smooth;
 }
 
+a{
+    text-decoration: none !important;
+}
+
 :root{
     --font-roboto: 'Roboto', 'sans-serif';
     --cor-cinza: #797e9c;
@@ -178,17 +182,19 @@ header #linkedin{
 }
 
 #sessao-principal #linkedin-and-curriculo-container button{
-    font-size: 16px;
+    font-size: 17px;
     padding: 8px;
+    border-radius: 5px;
     background-color: var(--cor-roxa);
     border: none;
     color: white;
     width: 140px;
     font-weight: 500;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
+
 
 #sessao-principal #linkedin-and-curriculo-container button:hover{
     cursor: pointer;
@@ -197,6 +203,7 @@ header #linkedin{
 
 #sessao-principal #linkedin-and-curriculo-container button .fa-linkedin{
     color: white;
+    margin: 0;
 }
 
 #img-sessao-principal{
@@ -553,6 +560,10 @@ footer{
     padding-bottom: 60px;
 }
 
+footer .fa-brands{
+    font-size: 20px;
+}
+
 footer a{
     color: white;
     text-decoration: none;
@@ -637,8 +648,91 @@ footer a:hover{
 }
 
 
-@media screen and (max-width: 500px){
 
+/* MEDIAS */
+
+
+
+
+@media screen and (max-width: 1130px){
+    #img-sessao-principal{
+        width: 335px;
+    }
+}
+
+@media screen and (max-width: 931px) {
+    #img-sobre{
+        order: 1;
+    }
+
+    #sobre{
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 851px){
+    #img-sessao-principal{
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #img-sessao-principal{
+        display: none;
+    }
+
+    #menu-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    #menu-container img{
+        width: 25px;
+    }
+
+    .material-symbols-outlined{
+        display: block;
+        text-align: right;
+        font-size: 35px;
+        padding: 10px;
+    }
+
+    .material-symbols-outlined:hover{
+        cursor: pointer;
+    }
+
+    header{
+        flex-direction: column;
+        display: none;
+        position: fixed;
+        z-index: 999;
+        background-color: white;
+        margin-top: -8px;
+        width: 100vw;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    header nav{
+        align-items: center;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px 0px;
+    }
+
+    header .fa-brands{
+        font-size: 25px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px){
     body{
         margin: 0;
     }
@@ -694,7 +788,7 @@ footer a:hover{
     /* conteúdo  */
 
     #sobre img{
-        width: 200px;
+        width: 300px;
     }
 
     #footer-container2{
@@ -752,84 +846,13 @@ footer a:hover{
     }
 }
 
-footer .fa-brands{
-    font-size: 20px;
-}
-
-@media screen and (max-width: 1130px){
-    #img-sessao-principal{
-        width: 335px;
-    }
-}
-
-@media screen and (max-width: 931px) {
-    #img-sobre{
-        order: 1;
-    }
-
-    #sobre{
-        gap: 50px;
-    }
-}
-
-@media screen and (max-width: 851px){
-    #img-sessao-principal{
-        width: 280px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #img-sessao-principal{
-        display: none;
-    }
-
-    #menu-container{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 10px;
-    }
-
-    #menu-container img{
-        width: 25px;
-    }
-
-    .material-symbols-outlined{
-        display: block;
-        text-align: right;
-        font-size: 35px;
-        padding: 10px;
-    }
-
-    .material-symbols-outlined:hover{
-        cursor: pointer;
-    }
-
-    header{
-        flex-direction: column;
-        display: none;
-    }
-
-    header nav{
-        align-items: center;
-        margin-top: 80px;
-        margin-bottom: 80px;
-        display: flex;
-        flex-direction: column;
-        gap: 50px 0px;
-    }
-
-    header .fa-brands{
-        font-size: 25px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 370px){
+@media (max-width: 400px){
     #sessao-principal #linkedin-and-curriculo-container{
-        gap: 20px;
+        justify-content: start;
+    }
+    #sessao-principal #linkedin-and-curriculo-container button{
+        width: 120px;
+        font-size: 14px;
     }
 }
 
@@ -844,37 +867,14 @@ footer .fa-brands{
     }
 }
 
-@media (max-width: 400px){
-    #sessao-principal #linkedin-and-curriculo-container{
-        justify-content: start;
-    }
+@media (max-width: 350px){
     #sessao-principal #linkedin-and-curriculo-container button{
-        width: 120px;
-        font-size: 14px;
-    }
-}
-
-
-@media (max-width: 500px){
-    #img-sobre img{
-        width: 300px;
+        width: 100px;
     }
 }
 
 @media (max-width: 300px){
     #img-sobre img{
         width: 200px;
-    }
-}
-
-@media (min-width: 800px){
-    header{
-        position: fixed;
-        z-index: 999;
-        background-color: white;
-        margin-top: -8px;
-        width: 100vw;
-        left: 50%;
-        transform: translate(-50%, 0);
     }
 }
