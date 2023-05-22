@@ -36,7 +36,3 @@ function subirMenu(){
         } 
     }
 }
-
-function alertaBotao(){
-    window.alert('Ainda em Desenvolvimento...')
-}

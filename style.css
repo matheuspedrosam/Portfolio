@@ -166,33 +166,37 @@ header #linkedin{
     line-height: 1.5;
 }
 
-#sessao-principal form{
-    margin-left: 40px;
+#sessao-principal #linkedin-and-curriculo-container{
+    margin-top: 35px;
+    margin-left: 42px;
+    margin-right: 42px;
+    max-width: 300px;
     display: flex;
+    justify-content: space-between;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
-#sessao-principal form input{
-    border: none;
-    padding: 15px;
-    flex: 0 1 300px;
-    color: var(--cor-cinza);
-    font-style: italic;
-    font-weight: 400;
-}
-
-#sessao-principal form button{
-    padding: 10px;
+#sessao-principal #linkedin-and-curriculo-container button{
+    font-size: 16px;
+    padding: 8px;
     background-color: var(--cor-roxa);
     border: none;
     color: white;
-    font-weight: 400;
-    flex: 0 1 140px;
+    width: 140px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#sessao-principal form button:hover{
+#sessao-principal #linkedin-and-curriculo-container button:hover{
     cursor: pointer;
     box-shadow: 0px 0px 5px var(--cor-roxa);
+}
+
+#sessao-principal #linkedin-and-curriculo-container button .fa-linkedin{
+    color: white;
 }
 
 #img-sessao-principal{
@@ -822,6 +826,34 @@ footer .fa-brands{
         margin-bottom: 20px;
     }
 }
+
+@media (max-width: 370px){
+    #sessao-principal #linkedin-and-curriculo-container{
+        gap: 20px;
+    }
+}
+
+@media (max-width: 375px){
+    #sessao-principal h1{
+        font-size: 22px;
+    }
+    
+    #primeira-apresentacao p{
+        font-size: 11px;
+        margin-right: 9px;
+    }
+}
+
+@media (max-width: 400px){
+    #sessao-principal #linkedin-and-curriculo-container{
+        justify-content: start;
+    }
+    #sessao-principal #linkedin-and-curriculo-container button{
+        width: 120px;
+        font-size: 14px;
+    }
+}
+
 
 @media (max-width: 500px){
     #img-sobre img{
