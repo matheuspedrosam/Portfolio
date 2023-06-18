@@ -213,6 +213,18 @@ header #linkedin{
     bottom: 30px;
 }
 
+#img-sessao-principal-2{
+    width: 110px;
+    position: absolute;
+    top: 20px;
+    right: 25px;
+}
+
+#img-sessao-principal-2 img{
+    display: block;
+    width: 100%;
+}
+
 /* INFOS  */
 
 #infos{
@@ -655,8 +667,8 @@ footer a:hover{
 
 
 @media screen and (max-width: 1130px){
-    #img-sessao-principal{
-        width: 335px;
+    #img-sessao-principal-2{
+        display: none;
     }
 }
 
@@ -843,6 +855,12 @@ footer a:hover{
 
     #contato{
         padding-bottom: 0px;
+    }
+}
+
+@media (max-width: 1100px){
+    #sessao-principal {
+
     }
 }
 
