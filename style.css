@@ -698,7 +698,8 @@ footer a:hover{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-left: 10px;
+        padding-left: 30px;
+        padding-right: 20px;
     }
 
     #menu-container img{
@@ -803,6 +804,10 @@ footer a:hover{
         width: 100px;
         top: 20px;
         left: 40px;
+    }
+
+    #frase-principal{
+        margin-top: 20px;
     }
     
     #sessao-principal{
