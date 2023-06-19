@@ -217,7 +217,8 @@ header #linkedin{
     top: 20px;
     right: 25px;
     border-radius: 60px;
-    border: 5px solid black;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.774)
 }
 
 #img-sessao-principal-2 img{
