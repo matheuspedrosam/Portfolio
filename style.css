@@ -883,6 +883,10 @@ footer a:hover{
         width: 120px;
         font-size: 14px;
     }
+
+    .informacoes{
+        flex: 0 1 150px;
+    }
 }
 
 @media (max-width: 375px){
