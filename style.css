@@ -69,11 +69,11 @@ header nav a::after{
     position: absolute;
     bottom: 0;
     left: 0;
+    transition: 0.3s ease-in-out;
 }
 
 header nav a:hover::after{
     width: 100%;
-    transition: 0.3s;
 }
 
 .fa-brands{
@@ -349,15 +349,15 @@ header #linkedin{
     text-align: center;
     color: grey;
     background-color: var(--cor-clara);
-    border-bottom: 6px solid var(--cor-roxa);
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.664);
+    box-shadow: 0px 0px 2px 0px rgb(0 0 0 / 70%);
+    transition: 0.1s ease-in-out;
+    cursor: pointer;
 }
 
 .projetos:hover{
-    transform: translate(0px, -5px);
-    transition: 0.3s;
-    border-bottom: 6px solid aquamarine;
-    cursor: pointer;
+    transform: translate(-2px, -5px);
+    box-shadow: 5px 12px 6px 0px rgb(0 0 0 / 30%);
+    border: 1px solid rgba(0, 0, 0, 0.219);
 }
 
 #projetos a{
@@ -385,6 +385,7 @@ header #linkedin{
 
 #skills{
     padding-top: 40px;
+    padding-bottom: 40px;
     margin: auto;
     margin-top: 60px;
     max-width: 1200px;
