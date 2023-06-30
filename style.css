@@ -322,8 +322,8 @@ header #linkedin{
     margin-bottom: 40px;
     font-size: 2.5em;
     text-align: center;
-    color: var(--cor-preto);
-    font-weight: lighter;
+    color: rgba(0, 0, 0, 0.445);
+    font-weight: 400;
 }
 
 .projetos-container-html-css{
@@ -349,7 +349,7 @@ header #linkedin{
     text-align: center;
     color: grey;
     background-color: var(--cor-clara);
-    box-shadow: 0px 0px 2px 0px rgb(0 0 0 / 70%);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.30);
     transition: 0.1s ease-in-out;
     cursor: pointer;
 }
@@ -410,6 +410,7 @@ header #linkedin{
     max-width: 230px;
     margin: 10px;
     padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
 }
 
 .tecnologias:hover{
