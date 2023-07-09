@@ -866,6 +866,19 @@ footer a:hover{
         text-align: left;
         font-size: 0.8em;
     }
+
+    .tecnologias h1{
+        margin-bottom: 20px !important;
+    }
+
+    .tecnologias h2{
+        margin-top: 0px;
+        font-size: 12px;
+    }
+
+    .tecnologias p{
+        font-size: 10px;
+    }
     
     #contato{
         padding-bottom: 0px;
