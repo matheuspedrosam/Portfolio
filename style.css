@@ -327,25 +327,23 @@ header #linkedin{
 }
 
 .projetos-container-html-css{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
 .projetos-container-js{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 
 .projetos{
     display: flex;
     flex-direction: column;
-    margin: 10px 5px;
-    max-width: 300px;
     text-align: center;
     color: grey;
     background-color: var(--cor-clara);
@@ -362,24 +360,21 @@ header #linkedin{
 
 #projetos a{
     text-decoration: none;
+    display: block;
 }
 
 .projetos h2{
-    font-size: 2.2em;
+    font-size: 25px;
     color: var(--cor-preto);
     font-weight: 300;
 }
 
 .projetos img{
     margin: 0;
-    max-width: 300px;
+    width: 100%;
     order: -1;
 }
 
-.calculadora h2, .darkmode h2, .slideshow h2, .rd-e-mario h2{
-    margin-top: 51px;
-    margin-bottom: 51px;
-}
 
 /* SKILLS  */
 
@@ -673,6 +668,10 @@ footer a:hover{
     #img-sessao-principal-2{
         display: none;
     }
+
+    .projetos-container-html-css, .projetos-container-js{
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 931px) {
@@ -841,24 +840,6 @@ footer a:hover{
 
     #sobre img{
         width: 300px;
-    }
-
-    .projetos{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 160px;
-        height: 200px;
-        font-size: 12px;
-    }
-    
-    .projetos img{
-        width: 160px;
-    }
-    
-    .rd-e-mario h2{
-        margin-top: 0px;
-        margin-bottom: 16px;
     }
     
     .tecnologias{
