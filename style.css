@@ -144,14 +144,15 @@ header #linkedin{
 /* Conteudo Principal  */
 
 #sessao-principal{
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
     background-color: var(--cor-clara);
-    justify-content: center;
     max-width: 1200px;
+    padding: 60px;
     margin: auto;
     position: relative;
+}
+
+#sessao-principal #frase-principal{
+    max-width: 500px;
 }
 
 #sessao-principal h1{
@@ -159,50 +160,80 @@ header #linkedin{
     color: var(--cor-preto);
 }
 
+#sessao-principal p{
+    max-width: 360px;
+}
+
 #Edsger{
     color: var(--cor-roxa);
 }
 
-#primeira-apresentacao{
-    margin-left: 42px;
-    line-height: 1.5;
-}
+/* Btns - Sessao Principal */
 
-#sessao-principal #linkedin-and-curriculo-container{
+#linkedin-youtube-and-curriculo-container{
     margin-top: 35px;
-    margin-left: 42px;
-    margin-right: 42px;
     max-width: 300px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
-    flex-wrap: wrap;
 }
 
-#sessao-principal #linkedin-and-curriculo-container button{
+#linkedin-youtube-and-curriculo-container #linkedin-btn, #curriculo-btn{
     font-size: 17px;
     padding: 8px;
     border-radius: 5px;
     background-color: var(--cor-roxa);
     border: none;
     color: white;
-    width: 140px;
+    width: 100%;
     font-weight: 500;
     display: flex;
-    justify-content: space-evenly;
+    gap: 10px;
+    justify-content: center;
     align-items: center;
 }
 
+#linkedin-youtube-and-curriculo-container #youtube-btn-link{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
 
-#sessao-principal #linkedin-and-curriculo-container button:hover{
+#linkedin-youtube-and-curriculo-container #youtube-btn-link button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 10px;
+    gap: 10px;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px black;
+}
+
+#youtube-btn img{
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#linkedin-youtube-and-curriculo-container button:hover{
     cursor: pointer;
     box-shadow: 0px 0px 5px var(--cor-roxa);
 }
 
-#sessao-principal #linkedin-and-curriculo-container button .fa-linkedin{
+#linkedin-youtube-and-curriculo-container #youtube-btn:hover{
+    box-shadow: 0px 0px 8px 0px red;
+}
+
+#linkedin-youtube-and-curriculo-container button .fa-linkedin{
     color: white;
     margin: 0;
 }
+
+/* Imgs - sessão principal */
 
 #img-sessao-principal{
     width: 500px;
@@ -216,14 +247,14 @@ header #linkedin{
     position: absolute;
     top: 20px;
     right: 25px;
-    border-radius: 60px;
-    border: 2px solid rgb(0, 0, 0);
-    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.774)
 }
 
 #img-sessao-principal-2 img{
     display: block;
     width: 100%;
+    border-radius: 60px;
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.774)
 }
 
 /* INFOS  */
@@ -675,18 +706,17 @@ footer a:hover{
 }
 
 @media screen and (max-width: 931px) {
+
+    #img-sessao-principal{
+        width: 280px;
+    }
+
     #img-sobre{
         order: 1;
     }
 
     #sobre{
         gap: 50px;
-    }
-}
-
-@media screen and (max-width: 851px){
-    #img-sessao-principal{
-        width: 280px;
     }
 }
 
@@ -801,10 +831,14 @@ footer a:hover{
     }
     
     #img-sessao-principal-2{
-        display: block;
+        position: static;
+        display: grid;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #img-sessao-principal-2 img{
         width: 100px;
-        top: 20px;
-        left: 40px;
     }
 
     #frase-principal{
@@ -812,16 +846,22 @@ footer a:hover{
     }
     
     #sessao-principal{
-        padding-top: 40px;
+        padding: 20px;
     }
 
     #sessao-principal h1{
+        text-align: center;
         font-size: 5vw;
     }
 
     #sessao-principal p{
+        text-align: center;
         font-size: 3vw;
         margin-bottom: 40px;
+    }
+
+    #sessao-principal #linkedin-youtube-and-curriculo-container{
+        max-width: 100%;
     }
 
     #sessao-principal form input{
@@ -832,9 +872,6 @@ footer a:hover{
         flex: 0 1;
     }
 
-    #sessao-principal #linkedin-and-curriculo-container{
-        margin-top: 0px;
-    }
     
     /* conteúdo  */
 
@@ -872,12 +909,13 @@ footer a:hover{
 
 @media (max-width: 400px){
     
-    #sessao-principal #linkedin-and-curriculo-container{
-        justify-content: start;
+    #linkedin-youtube-and-curriculo-container{
+        grid-template-columns: 1fr;
     }
-    #sessao-principal #linkedin-and-curriculo-container button{
-        width: 120px;
-        font-size: 14px;
+
+    #linkedin-youtube-and-curriculo-container #youtube-btn-link{
+        grid-column-start: 1;
+        grid-column-end: 1;
     }
 
     .informacoes{
@@ -891,8 +929,8 @@ footer a:hover{
     }
     
     #primeira-apresentacao p{
-        font-size: 11px;
-        margin-right: 9px;
+        font-size: 13px;
+        
     }
 }
 
