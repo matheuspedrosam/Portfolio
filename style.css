@@ -908,16 +908,6 @@ footer a:hover{
 }
 
 @media (max-width: 400px){
-    
-    #linkedin-youtube-and-curriculo-container{
-        grid-template-columns: 1fr;
-    }
-
-    #linkedin-youtube-and-curriculo-container #youtube-btn-link{
-        grid-column-start: 1;
-        grid-column-end: 1;
-    }
-
     .informacoes{
         flex: 0 1 150px;
     }
@@ -934,15 +924,18 @@ footer a:hover{
     }
 }
 
-@media (max-width: 350px){
-    #sessao-principal #linkedin-and-curriculo-container button{
-        width: 100px;
-    }
-}
-
 @media (max-width: 333px){
     #img-sessao-principal-2{
         top: 15px;
+    }
+
+    #linkedin-youtube-and-curriculo-container{
+        grid-template-columns: 1fr;
+    }
+    
+    #linkedin-youtube-and-curriculo-container #youtube-btn-link{
+        grid-column-start: 1;
+        grid-column-end: 1;
     }
 }
 
