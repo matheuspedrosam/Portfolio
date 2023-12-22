@@ -211,14 +211,14 @@ header #linkedin{
     color: white;
     font-size: 18px;
     font-weight: bold;
-    box-shadow: 0px 0px 8px 0px red;
+    box-shadow: 0px 0px 3px 0px red;
     text-shadow: 1px 1px 0px black;
 }
 
 #youtube-btn img{
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 5px;
-    box-shadow: 0px 0px 2px 0px white;
+    box-shadow: 0px 0px 1px 0px white, 1px 1px 0px 0px black;
 }
 
 #linkedin-youtube-and-curriculo-container button:hover{
@@ -227,7 +227,7 @@ header #linkedin{
 }
 
 #linkedin-youtube-and-curriculo-container #youtube-btn:hover{
-    box-shadow: 0px 0px 12px 0px red;
+    box-shadow: 0px 0px 8px 0px red;
 }
 
 #linkedin-youtube-and-curriculo-container button .fa-linkedin{
@@ -361,7 +361,7 @@ header #linkedin{
 
 .projetos-container-html-css, .projetos-container-js{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     justify-content: center;
 }
@@ -908,7 +908,7 @@ footer a:hover{
     }
 }
 
-@media (max-width: 375px){
+/* @media (max-width: 375px){
     #sessao-principal h1{
         font-size: 22px;
     }
@@ -917,9 +917,18 @@ footer a:hover{
         font-size: 13px;
         
     }
-}
+} */
 
 @media (max-width: 333px){
+    #sessao-principal h1{
+        font-size: 22px;
+    }
+    
+    #primeira-apresentacao p{
+        font-size: 13px;
+        
+    }
+
     #img-sessao-principal-2{
         top: 15px;
     }
@@ -931,6 +940,10 @@ footer a:hover{
     #linkedin-youtube-and-curriculo-container #youtube-btn-link{
         grid-column-start: 1;
         grid-column-end: 1;
+    }
+
+    .projetos-container-html-css, .projetos-container-js{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
