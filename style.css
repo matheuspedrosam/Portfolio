@@ -20,6 +20,10 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: #040613;
+}
+
 a{
     text-decoration: none !important;
 }
@@ -39,6 +43,7 @@ a{
 }
 
 header{
+    background-color: var(--cor-preto);
     max-width: 1200px;
     display: flex;
     justify-content: space-between;
@@ -87,7 +92,28 @@ header .fa-brands:hover{
 
 /* Header Animations  */
 
+#img-menu{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: relative;
+}
+#img-menu img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 header #img-logo{
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
     animation-name: header-efect;
 	animation-duration: 0.2s;
 	animation-delay: 0s; 
@@ -144,45 +170,50 @@ header #linkedin{
 /* Conteudo Principal  */
 
 #sessao-principal{
-    background-color: var(--cor-clara);
+    text-align: center;
+    /* background-color: var(--cor-clara); */
     max-width: 1200px;
     padding: 60px;
     margin: auto;
     position: relative;
-}
-
-#sessao-principal #frase-principal{
-    max-width: 500px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 #sessao-principal h1{
+    color: white;
     font-size: 2.25em;
-    color: var(--cor-preto);
 }
 
-#sessao-principal p{
-    max-width: 360px;
-}
 
 #Edsger{
     color: var(--cor-roxa);
+}
+
+/* Foto */
+
+#foto-perfil{
+    display: grid;
+    justify-content: center;
 }
 
 /* Btns - Sessao Principal */
 
 #linkedin-youtube-and-curriculo-container{
     margin-top: 35px;
-    max-width: 300px;
     display: grid;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    max-width: 350px;
+    margin: auto;
 }
 
 #linkedin-youtube-and-curriculo-container #linkedin-btn, #curriculo-btn{
     font-size: 17px;
-    padding: 8px;
+    padding: 10px 8px;
     border-radius: 5px;
-    background-color: var(--cor-roxa);
+    background-color: var(--cor-preto);
     border: none;
     color: white;
     width: 100%;
@@ -282,8 +313,8 @@ header #linkedin{
 }
 
 .informacoes h2{
+    color: white;
     font-size: 2em;
-    color: var(--cor-preto);
 }
 
 .informacoes p{
@@ -341,21 +372,22 @@ header #linkedin{
 /* Projetos */
 
 #projetos{
+    background-color: rgba(255, 255, 255, 0.015);
     border-top: 1px solid rgba(128, 128, 128, 0.151);
+    padding: 30px;
     max-width: 1200px;
     margin: auto;
     margin-top: 40px;
     padding-bottom: 55px;
-    margin-bottom: 40px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.151);
 }
 
 #projetos h1{
+    color: rgba(255, 255, 255, 0.5);
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 2.5em;
     text-align: center;
-    color: rgba(0, 0, 0, 0.445);
     font-weight: 400;
 }
 
@@ -371,16 +403,13 @@ header #linkedin{
     display: flex;
     flex-direction: column;
     text-align: center;
-    color: grey;
     background-color: var(--cor-clara);
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.30);
     transition: 0.1s ease-in-out;
     cursor: pointer;
 }
 
 .projetos:hover{
-    transform: translate(-2px, -5px);
-    box-shadow: 5px 12px 6px 0px rgb(0 0 0 / 30%);
+    transform: translate(-1px, -3px);
     border: 1px solid rgba(0, 0, 0, 0.219);
 }
 
@@ -405,16 +434,19 @@ header #linkedin{
 /* SKILLS  */
 
 #skills{
+    background-color: var(--cor-preto);
     padding-top: 40px;
     padding-bottom: 40px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 40px;
     max-width: 1200px;
-    background-color: var(--cor-clara);
+    color: white;
+    margin-bottom: 40px;
 }
 
 #skills h1{
-    font-weight: lighter;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
     text-align: center;
     margin-bottom: 40px;
 }
@@ -427,7 +459,7 @@ header #linkedin{
 
 .tecnologias{
     text-align: justify;
-    background-color: white;
+    background-color: #3c3c3c;
     max-width: 230px;
     margin: 10px;
     padding: 10px;
@@ -721,6 +753,7 @@ footer a:hover{
     }
 
     #menu-container{
+        background-color: var(--cor-preto);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -734,6 +767,7 @@ footer a:hover{
 
     .material-symbols-outlined{
         display: block;
+        color: white;
         text-align: right;
         font-size: 35px;
         padding: 10px;
@@ -748,7 +782,6 @@ footer a:hover{
         display: none;
         position: fixed;
         z-index: 999;
-        background-color: white;
         margin-top: -8px;
         width: 100vw;
         left: 50%;
@@ -775,6 +808,10 @@ footer a:hover{
 @media (max-width: 500px){
     body{
         margin: 0;
+    }
+
+    #menu-container{
+        padding: 5px;
     }
     
         /* Header Animations  */
@@ -825,15 +862,8 @@ footer a:hover{
         animation-delay: 1.6s; 
     }
     
-    #img-sessao-principal-2{
-        position: static;
-        display: grid;
-        justify-content: center;
-        width: 100%;
-    }
-
-    #img-sessao-principal-2 img{
-        width: 100px;
+    #foto-perfil img{
+        width: 300px;
     }
 
     #frase-principal{
