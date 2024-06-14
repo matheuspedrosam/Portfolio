@@ -93,12 +93,13 @@ header .fa-brands:hover{
 /* Header Animations  */
 
 #img-menu{
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 50px;
-    height: 50px;
+    background-color: rgba(255, 255, 255, 0.04);
+    width: 45px;
+    height: 45px;
     border-radius: 100px;
     position: relative;
 }
+
 #img-menu img{
     position: absolute;
     left: 50%;
@@ -107,9 +108,9 @@ header .fa-brands:hover{
 }
 
 header #img-logo{
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 50px;
-    height: 50px;
+    background-color: rgba(255, 255, 255, 0.04);
+    width: 45px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -438,10 +439,9 @@ header #linkedin{
     padding-top: 40px;
     padding-bottom: 40px;
     margin: auto;
-    margin-top: 40px;
     max-width: 1200px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.151);;
     color: white;
-    margin-bottom: 40px;
 }
 
 #skills h1{
