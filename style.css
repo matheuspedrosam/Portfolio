@@ -22,6 +22,10 @@ html{
 }
 
 body{
+    background-color: #040613fa;
+}
+
+#sessao-principal, #infos, #projetos{
     background-color: #040613;
 }
 
@@ -416,11 +420,11 @@ header #linkedin{
     background-color: var(--cor-clara);
     transition: 0.1s ease-in-out;
     cursor: pointer;
+    border: 1px solid white;
 }
 
 .projetos:hover{
-    transform: translate(-1px, -3px);
-    border: 1px solid rgba(0, 0, 0, 0.219);
+    transform: scale(102%);
 }
 
 #projetos a{
@@ -438,6 +442,7 @@ header #linkedin{
     margin: 0;
     width: 100%;
     order: -1;
+    border-bottom: 1px solid lightgray;
 }
 
 
