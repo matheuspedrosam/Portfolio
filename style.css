@@ -15,22 +15,7 @@
 *{
     box-sizing: border-box;
     font-family: var(--font-roboto);
-}
-
-html{
     scroll-behavior: smooth;
-}
-
-body{
-    background-color: #040613fa;
-}
-
-#sessao-principal, #infos, #projetos{
-    background-color: #040613;
-}
-
-a{
-    text-decoration: none !important;
 }
 
 :root{
@@ -39,6 +24,50 @@ a{
     --cor-clara: #f9f9fc;
     --cor-roxa: #5e3aee;
     --cor-preto: #0f1221; 
+
+    --background: #F0F4F8;
+    --azul: #0A58D0;
+    --azulBtn: #1a73e8;
+
+    --roxoSootz: #2400AA;
+    --roxoSecundarioSootz: #B4A3FC;
+    --roxoSecundarioSootzTransparente: #b3a3fc18;
+    --verdeSootz: #CFFD01;
+    --verdeEscuro: #042940;
+
+    --suaveBoxShadow: 0px 0px 2px lightgray;
+    --cinza: #F3F3F3;
+    --cinzaSuave: #edf1f4;
+    --border-color: #dadce0;
+    --cinzaClaro: rgba(95, 99, 104);
+    --cinzaHoverBg: rgba(95, 99, 104, 0.1);
+
+    --primary-bg: #eeebe8;
+    --secondary-bg: rgba(255, 255, 255, 0.8);
+    --highlight-color: #2400AA;
+    --input-border: #ece9e6;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body{
+    margin: 0;
+    background-color: var(--background);
+}
+
+section{
+    background-color: white;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+
+/* MainContainer */
+#mainContainer{
+    box-shadow: 0px 0px 4px lightgray;
+    max-width: 1200px;
+    margin: auto;
 }
 
 /* Header  */
@@ -48,14 +77,13 @@ a{
 }
 
 header{
-    background-color: var(--cor-preto);
-    max-width: 1200px;
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
     padding: 20px;
-    margin: auto;
 }
 
 header img:hover{
@@ -86,7 +114,7 @@ header nav a:hover::after{
     width: 100%;
 }
 
-.fa-brands{
+.fa-brands, .fa-solid{
     margin: 0px 10px;
     color: var(--cor-cinza);
 }
@@ -114,23 +142,25 @@ header .fa-brands:hover{
 }
 
 header #name-logo{
-    background-color: rgba(0, 0, 0, 0.2);
+    /* background-color: var(--cor-preto); */
     border-radius: 3px;
     padding: 8px;
     animation-name: header-efect;
 	animation-duration: 0.2s;
 	animation-delay: 0s; 
+    transition: .2s ease-in-out;
+    /* border: 1px solid var(--cinzaSuave); */
 }
 
 #name-logo a{
     font-size: 18px;
     font-family: "Outfit", sans-serif;
     font-weight: 900;
-    color: white;
+    color: black;
 }
 
 header #name-logo:hover{
-    transform: scale(101%);
+    transform: translateY(-2px);
 }
 
 header #nav-sobre{
@@ -186,15 +216,11 @@ header #linkedin{
 #sessao-principal{
     text-align: center;
     /* background-color: var(--cor-clara); */
-    max-width: 1200px;
     padding: 60px;
-    margin: auto;
     position: relative;
-    color: rgba(255, 255, 255, 0.5);
 }
 
 #sessao-principal h1{
-    color: white;
     font-size: 2.25em;
 }
 
@@ -223,27 +249,39 @@ header #linkedin{
     margin: auto;
 }
 
-#linkedin-youtube-and-curriculo-container #linkedin-btn, #curriculo-btn{
+#linkedin-youtube-and-curriculo-container button{
+    transition: .1s ease-in-out;
+}
+
+#linkedin-btn, #curriculo-btn{
     font-size: 17px;
     padding: 10px 8px;
     border-radius: 5px;
-    background-color: var(--cor-preto);
     border: none;
-    color: white;
+    color: var(--cor-cinza);
     width: 100%;
     font-weight: 500;
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    background-color: var(--background);
+    border: 1px solid var(--cinzaSuave);
 }
 
-#linkedin-youtube-and-curriculo-container #youtube-btn-link{
+#linkedin-btn:hover,
+#curriculo-btn:hover{
+    background-color: white;
+}
+
+#youtube-btn-link{
     grid-column-start: 1;
     grid-column-end: 3;
 }
 
-#linkedin-youtube-and-curriculo-container #youtube-btn-link button{
+#youtube-btn-link button{
+    cursor: pointer;
     width: 100%;
     display: flex;
     align-items: center;
@@ -251,13 +289,16 @@ header #linkedin{
     padding: 7px 10px;
     gap: 10px;
     background-color: red;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 5px;
     color: white;
     font-size: 18px;
     font-weight: bold;
-    box-shadow: 0px 0px 3px 0px red;
     text-shadow: 1px 1px 0px black;
+}
+
+#youtube-btn-link button:hover{
+    background-color: rgb(219, 0, 0);
 }
 
 #youtube-btn img{
@@ -266,42 +307,8 @@ header #linkedin{
     box-shadow: 0px 0px 1px 0px white, 1px 1px 0px 0px black;
 }
 
-#linkedin-youtube-and-curriculo-container button:hover{
-    cursor: pointer;
-    box-shadow: 0px 0px 5px var(--cor-roxa);
-}
-
-#linkedin-youtube-and-curriculo-container #youtube-btn:hover{
-    box-shadow: 0px 0px 8px 0px red;
-}
-
 #linkedin-youtube-and-curriculo-container button .fa-linkedin{
-    color: white;
     margin: 0;
-}
-
-/* Imgs - sessão principal */
-
-#img-sessao-principal{
-    width: 500px;
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-}
-
-#img-sessao-principal-2{
-    width: 110px;
-    position: absolute;
-    top: 20px;
-    right: 25px;
-}
-
-#img-sessao-principal-2 img{
-    display: block;
-    width: 100%;
-    border-radius: 60px;
-    border: 2px solid rgb(0, 0, 0);
-    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.774)
 }
 
 /* INFOS  */
@@ -309,12 +316,8 @@ header #linkedin{
 #infos{
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 40px;
     padding-top: 40px;
     padding-bottom: 40px;
-    margin-bottom: 40px;
     border-top: 1px solid rgba(128, 128, 128, 0.151);
     border-bottom: 1px solid rgba(128, 128, 128, 0.151);
     justify-content: space-around;
@@ -327,7 +330,6 @@ header #linkedin{
 }
 
 .informacoes h2{
-    color: white;
     font-size: 2em;
 }
 
@@ -342,13 +344,13 @@ header #linkedin{
 #sobre{
     display: flex;
     background-color: var(--cor-preto);
-    max-width: 1200px;
-    margin: auto;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 100px;
     padding: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.151);
+    border-top: 1px solid rgba(128, 128, 128, 0.151);
 }
 
 #sobre img{
@@ -357,6 +359,7 @@ header #linkedin{
 
 .fa-street-view{
     background-color: var(--cor-roxa);
+    color: white;
     border-radius: 50%;
     padding: 10px;
 }
@@ -386,45 +389,73 @@ header #linkedin{
 /* Projetos */
 
 #projetos{
-    background-color: rgba(255, 255, 255, 0.015);
     border-top: 1px solid rgba(128, 128, 128, 0.151);
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-    margin-top: 40px;
-    padding-bottom: 55px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.151);
 }
 
-#projetos h1{
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    font-size: 2.5em;
+#projetos > :last-child{
+    border-bottom: none !important;
+}
+
+.projetosAndTitleContainer{
+    /* background-color: red; */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.151);
+    padding: 30px 0px;
+}
+
+#projetos .projetosAndTitleContainer h1{
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold !important;
     text-align: center;
+    padding: 0px 30px;
     font-weight: 400;
 }
 
-.projetos-container-html-css, .projetos-container-js{
+.projetosContainer{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 350px));
+    gap: 20px;
     justify-content: center;
+    padding: 20px;
 }
 
-
 .projetos{
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    background-color: var(--cor-clara);
     transition: 0.1s ease-in-out;
     cursor: pointer;
-    border: 1px solid white;
+    background-color: var(--background);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid var(--cinzaSuave);
+    transition: .2s ease-in-out;
 }
 
 .projetos:hover{
-    transform: scale(102%);
+    background-color: #e7ecf1;
+    transform: translateY(-2px);
+    box-shadow: 0px 2px 3px lightgray;
+}
+
+.projetos img{
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0;
+    min-height: 162px !important;
+    max-height: 162px !important;
+}
+
+.projetos h2{
+    text-align: left !important;
+    margin: 0;
+    margin-top: 15px;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    color: gray !important;
+    color: black !important;
 }
 
 #projetos a{
@@ -438,208 +469,70 @@ header #linkedin{
     font-weight: 300;
 }
 
-.projetos img{
-    margin: 0;
-    width: 100%;
-    order: -1;
-    border-bottom: 1px solid lightgray;
-}
-
 
 /* SKILLS  */
 
 #skills{
-    background-color: var(--cor-preto);
     padding-top: 40px;
     padding-bottom: 40px;
-    margin: auto;
-    max-width: 1200px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.151);;
     color: white;
 }
 
 #skills h1{
     font-weight: bold;
-    color: rgba(255, 255, 255, 0.5);
+    color: black;
     text-align: center;
     margin-bottom: 40px;
 }
 
 #skills-container{
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;    
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    padding: 20px;
+    gap: 20px;
+    justify-content: center;
 }
 
 .tecnologias{
-    text-align: justify;
-    background-color: #3c3c3c;
-    max-width: 230px;
-    margin: 10px;
+    color: black;
+    border-radius: 4px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    background-color: var(--background);
+    transition: 0.2s;
+    gap: 15px;
     padding: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.20);
+    border: 1px solid var(--cinzaSuave);
+}
+
+.tecnologias i{
+    margin: 0px !important;
+    font-size: 32px;
+    color: var(--cor-cinza);
+}
+
+.tecnologias h1{
+    text-align: left !important;
+    margin: 0px !important;
+    font-size: 22px;
+    color: gray !important;
 }
 
 .tecnologias:hover{
-    transition: 0.2s;
-}
-
-.tecnologias h1, h2{
-    text-align: center;
-    font-weight: 600;
-}
-
-.tecnologias h2{
-    margin-top: -10px;
-}
-
-.tecnologias p {
-    color: var(--cor-cinza);
-    line-height: 1.5;
-}
-
-.tecnologias h2{
-    font-size: 1em;
-}
-
-.html{
-    border-top: 2px solid #0000FF;
-}
-
-.html:hover{
-    box-shadow: 0px 0px 8px #0000FF;
-}
-
-.css{
-    border-top: 2px solid #FF6600;
-}
-
-.css i{
-    color: orange;
-}
-
-.css:hover{
-    box-shadow: 0px 0px 8px #FF6600;
-}
-
-.js{
-    border-top: 2px solid #FFFF00;
-}
-
-.js i{
-    color: rgb(216, 216, 4);
-}
-
-.js:hover{
-    box-shadow: 0px 0px 8px #FFFF00;
-}
-
-.ruby{
-    border-top: 2px solid #FF0000;
-}
-
-.ruby i{
-    color: red;
-}
-
-.ruby:hover{
-    box-shadow: 0px 0px 8px red;
-}
-
-.git{
-    border-top: 2px solid #F05033;
-}
-
-.git i{
-    color: #F05033;
-}
-
-.git:hover{
-    box-shadow: 0px 0px 8px #F05033;
-}
-
-.sql{
-    border-top: 2px solid mediumseagreen;
-}
-
-.sql i{
-    color: mediumseagreen;
-}
-
-.sql:hover{
-    box-shadow: 0px 0px 8px mediumseagreen;
-}
-
-.figma{
-    border-top: 2px solid #ff007f;
-} 
-
-.figma i{
-    color: #ff007f;
-}
-
-.figma:hover{
-    box-shadow: 0px 0px 8px #ff007f;
-}
-
-.node{
-    border-top: 2px solid #80BD41;
-}
-
-.node i{
-    color: #80BD41;
-}
-
-.node:hover{
-    box-shadow: 0px 0px 8px #80BD41;
-}
-
-.react{
-    border-top: 2px solid #4AD5FF;
-}
-
-.react i{
-    color: #4AD5FF;
-}
-
-.react:hover{
-    box-shadow: 0px 0px 8px #4AD5FF;
-}
-
-.bootstrapt{
-    border-top: 2px solid #8B0BFC;
-}
-
-.bootstrapt i{
-    color: #8B0BFC;
-}
-
-.bootstrapt:hover{
-    box-shadow: 0px 0px 8px #8B0BFC;
-}
-
-.wordpress{
-    border-top: 2px solid #21759b;
-}
-
-.wordpress i{
-    color: #21759b;
-}
-
-.wordpress:hover{
-    box-shadow: 0px 0px 8px #21759b;
+    box-shadow: 0px 2px 3px lightgray;
+    transform: translateY(-2px);
 }
 
 /* FOOTER  */
 
 footer{
-    background-color: var(--cor-preto);
-    max-width: 1200px;
-    margin: auto;
-    color: white;
+    background-color: white;
     padding: 20px;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 0px;
 }
 
 footer .fa-brands{
@@ -647,12 +540,12 @@ footer .fa-brands{
 }
 
 footer a{
-    color: white;
+    color: var(--cor-roxa);
     text-decoration: none;
 }
 
 footer a:hover{
-    color: var(--cor-roxa);
+    color: var(--highlight-color);
     transition: 0.4s;
 }
 
@@ -662,12 +555,14 @@ footer a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     border-radius: 50%;
     text-align: center;
+    border: 1px solid var(--border-color);
+    /* background-color: var(--background); */
 }
 
 #avatar-footer img{
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.1));
     width: 35px;
 }
 
@@ -712,287 +607,110 @@ footer a:hover{
 }
 
 #footer-container1-conversar .fa-brands:hover{
-    color: white;
-}
-
-/* Footer-container 2  */
-
-#footer-container2{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 40px 0px 40px;
-}
-
-#footer-container2 nav a{
-    padding: 30px;
+    color: var(--cor-preto);
 }
 
 
 
 /* MEDIAS */
-
-
-
-
-@media screen and (max-width: 1130px){
-    #img-sessao-principal-2{
-        display: none;
-    }
-
-    .projetos-container-html-css, .projetos-container-js{
-        padding: 20px;
-    }
-}
-
-@media screen and (max-width: 931px) {
-
-    #img-sessao-principal{
-        width: 280px;
-    }
-
-    #img-sobre{
-        order: 1;
-    }
-
-    #sobre{
-        gap: 50px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    #img-sessao-principal{
-        display: none;
-    }
-
-    #menu-container{
-        background-color: var(--cor-preto);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 30px;
-        padding-right: 20px;
-    }
-
-    #menu-container img{
-        width: 25px;
-    }
-
-    .material-symbols-outlined{
-        display: block;
-        color: white;
-        text-align: right;
-        font-size: 35px;
+@media screen and (max-width: 800px){
+    #header{
         padding: 10px;
-    }
-
-    .material-symbols-outlined:hover{
-        cursor: pointer;
-    }
-
-    header{
-        flex-direction: column;
-        display: none;
-        position: fixed;
-        z-index: 999;
-        margin-top: -8px;
-        width: 100vw;
-        left: 50%;
-        transform: translate(-50%, 0);
+        padding-bottom: 20px;
+        gap: 10px;
     }
 
     header nav{
-        align-items: center;
-        margin-top: 80px;
-        margin-bottom: 80px;
-        display: flex;
-        flex-direction: column;
-        gap: 50px 0px;
+        padding-left: 10px;
     }
 
-    header .fa-brands{
-        font-size: 25px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-bottom: 20px;
+    header nav a{
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+
+    #perfis-sociais{
+        display: none;
     }
 }
 
-@media (max-width: 500px){
-    body{
-        margin: 0;
-    }
 
-    #menu-container{
-        padding: 5px;
-    }
-    
-        /* Header Animations  */
+@media screen and (max-width: 500px){
 
-    header #name-logo{
-        animation-duration: 0.1s;
-    }
-
-    header #nav-sobre{
-        animation-duration: 0.1s;
-        animation-delay: 0.2s; 
-    }
-
-    header #nav-projetos{
-        animation-duration: 0.1s;
-        animation-delay: 0.4s; 
-    }
-
-    header #nav-skills{
-        animation-duration: 0.1s;
-        animation-delay: 0.6s; 
-    }
-
-    header #nav-contato{
-        animation-duration: 0.1s;
-        animation-delay: 0.8s; 
-    }
-
-    header #insta{
-        animation-duration: 0.1s;
-        animation-delay: 1s; 
-    }
-
-    header #github{
-        animation-duration: 0.1s;
-        animation-delay: 1.2s; 
-    }
-
-    header #whats{
-        animation-name: header-efect;
-        animation-duration: 0.1s;
-        animation-delay: 1.4s; 
-    }
-    
-    header #linkedin{
-        animation-name: header-efect;
-        animation-duration: 0.1s;
-        animation-delay: 1.6s; 
-    }
-    
-    #foto-perfil img{
-        width: 300px;
-    }
-
-    #frase-principal{
-        margin-top: 40px;
-    }
-    
     #sessao-principal{
         padding: 20px;
     }
 
     #sessao-principal h1{
-        text-align: center;
-        font-size: 5vw;
+        font-size: 24px;
     }
 
     #sessao-principal p{
-        text-align: center;
-        font-size: 3vw;
-        margin-bottom: 40px;
+        font-size: 14px;
     }
 
-    #sessao-principal #linkedin-youtube-and-curriculo-container{
-        max-width: 100%;
-    }
-
-    #sessao-principal form input{
-        flex: 0 1;
-    }
-
-    #sessao-principal button input{
-        flex: 0 1;
-    }
-
-    
-    /* conteúdo  */
-
-    #sobre img{
+    #foto-perfil img{
         width: 300px;
     }
-    
-    .tecnologias{
-        width: 42vw;
-        text-align: left;
-        font-size: 0.8em;
+
+    /* Infos */
+    #infos{
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .tecnologias h1{
-        margin-bottom: 20px !important;
+    /* Sobre */
+    #sobre{
+        gap: 0px;
     }
 
-    .tecnologias h2{
-        margin-top: 0px;
-        font-size: 12px;
+    #sobre h3{
+        margin-top: 20px;
     }
 
-    .tecnologias p{
-        font-size: 10px;
-    }
-    
-    #contato{
-        padding-bottom: 0px;
+    #sobre h1{
+        font-size: 28px;
+        margin-bottom: 30px;
     }
 
-    #footer-container2{
-        display: none;
+    #sobre h1 i{
+        margin-left: 0px;
     }
-}
 
-@media (max-width: 400px){
-    .informacoes{
-        flex: 0 1 150px;
-    }
-}
-
-/* @media (max-width: 375px){
-    #sessao-principal h1{
-        font-size: 22px;
+    #img-sobre{
+        order: 1;
     }
     
-    #primeira-apresentacao p{
-        font-size: 13px;
-        
-    }
-} */
-
-@media (max-width: 333px){
-    #sessao-principal h1{
-        font-size: 22px;
-    }
-    
-    #primeira-apresentacao p{
-        font-size: 13px;
-        
+    #img-sobre img{
+        width: 250px;
     }
 
-    #img-sessao-principal-2{
-        top: 15px;
+    /* Projetos */
+    .projetosAndTitleContainer h1{
+        padding: 20px;
     }
 
-    #linkedin-youtube-and-curriculo-container{
-        grid-template-columns: 1fr;
-    }
-    
-    #linkedin-youtube-and-curriculo-container #youtube-btn-link{
-        grid-column-start: 1;
-        grid-column-end: 1;
+    .projetosContainer{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    .projetos-container-html-css, .projetos-container-js{
+    /* Skills */
+    #skills-container{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
-}
 
-@media (max-width: 300px){
-    #img-sobre img{
-        width: 200px;
+
+    /* Footer */
+    #footer-container1{
+        justify-content: start;
+    }
+
+    #footer-container1-conversar a {
+        padding-left: 0px;
+    }
+
+    #footer-container1-conversar a + a{
+        padding-left: 10px !important;
     }
 }

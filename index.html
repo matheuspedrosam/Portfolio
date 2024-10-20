@@ -19,373 +19,305 @@
     <meta property="og:url" content="https://matheuspedrosam.github.io/Portfolio/"/>
     <meta property="og:site_name" content="Pedrosa Portfolio"/>
 </head>
-<body onresize="ajeitarMenu()">
-    <div id="menu-container">
-        <div>
-            <a id="img-menu" target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/"><img src="imagens/avatar.png" alt=""></a>
-        </div>
-        <i onclick="abrirMenu()" id="menu" class="material-symbols-outlined">
-            menu
-        </i>
-    </div>
-    <header id="header">
-        <div id="name-logo">
-            <a target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/">PEDROSA</a>
-        </div>
-        <nav>
-            <a href="#sobre" id="nav-sobre">Sobre</a>
-            <a href="#projetos" id="nav-projetos">Projetos</a>
-            <a href="#skills" id="nav-skills">Skills</a>
-            <a href="#contato" id="nav-contato">Contato</a>
-        </nav>
-        <div id="perfis-sociais">
-            <a id="insta" target="_blank" href="https://www.instagram.com/devpedrosam/"><i class="fa-brands fa-instagram"></i></a>
-            <a id="github" target="_blank" href="https://github.com/matheuspedrosam"><i class="fa-brands fa-github"></i></a>
-            <a id="whats" target="_blank" href="https://wa.me/+5582988166281"><i class="fa-brands fa-whatsapp"></i></a>
-            <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-    </header>
-
-    <section onclick="subirMenu()" id="sessao-principal">
-        <div id="frase-principal">
-            <h1>
-                A arte de programar consiste em organizar e dominar complexidade
-                - <span id="Edsger">Edsger W. Dijkstra</span>
-            </h1>
-        </div>
-        <div id="primeira-apresentacao">
-            <p>
-                Um <strong>Web Developer</strong> e amante da área em MCZ/AL. 
-                Eu venho focado nos estudos na parte do Front-End,
-                lembrando sempre da responsividade.
-            </p>
-            <p>
-                Obs.: Esse portfólio, foi feito no começo de meus estudos (Com + algumas atualizações, ao longo da faculdade). Então depois irei recriar para uma nova versão.
-            </p>
-        </div>
-        <div id="foto-perfil">
-            <img width="400px" src="imagens/Foto de perfil att.png" alt="">
-        </div>
-        <div id="linkedin-youtube-and-curriculo-container">
-            <a target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/">
-                <button id="linkedin-btn">
-                    <i class="fa-brands fa-linkedin"></i><span>Linked-In</span>
-                </button>
-            </a>
-            <a href="Currículo Profissional.pdf" download="Currículo">
-                <button id="curriculo-btn">
-                    <i class="fa fa-download" aria-hidden="true"></i><span>Currículo</span>
-                </button>
-            </a>
-            <a id="youtube-btn-link" target="_blank" href="https://www.youtube.com/@devpedrosam">
-                <button id="youtube-btn">
-                    <img width="25px" src="imagens/youtube-btn.png" alt=""> Youtube
-                </button>
-            </a>
-        </div>
-    </section>
-
-    <section id="infos">
-        <div class="informacoes">
-            <h2>21</h2>
-            <p>Anos</p>
-        </div>
-        <div class="informacoes">
-            <h2>3</h2>
-            <p>Anos de Estudo</p>
-        </div>
-        <div class="informacoes">
-            <h2>6</h2>
-            <p>Certificados</p>
-        </div>
-        <div class="informacoes">
-            <h2>7°</h2>
-            <p>Período</p>
-        </div>
-    </section>
-
-    <section id="sobre">
-        <div class="vanila-tilt" id="img-sobre">
-            <img src="imagens/Task-bro.svg" alt="">
-        </div>
-        <div id="div-sobre">
-            <h3>Quem é Matheus Pedrosa?</h3>
-            <h1><i class="fa-solid fa-street-view"></i> Um pouco sobre mim</h1>
-            <p>
-                Sigo a carreira voltada na área de Tecnologia da Informação, comecei com o foco para o desenvolvimento de projetos web na parte do Front-End, entretando estou buscando conhecimento em desenvolvimento de softwares web de uma forma geral (Full Stack). Tenho conhecimento em banco de dados, e já exercitei bastante minha lógica de programação. Estou sempre pensando no futuro, desejo fazer pós, doutorado, mestrado... Quem sabe conhecer a área de mobile, I.A, de hacking / segurança, redes...
-            </p>
-            <p>
-                Atualmente estou fazendo faculdade para bacharelado em Sistemas De Informação, com conclusão prevista para 2025.1, e possuo ensino médio completo, me formei no colégio Santa Madalena Sofia em 2020. E estou em busca do meu primeiro estágio.
-            </p>
-        </div>
-    </section>
-
-    <section id="projetos">
-        <h1>Projetos Profissionais</h1>
-        <div class="projetos-container-html-css">
-            <a target="_blank" href="#">
-                <div class="projetos">
-                    <div style="height: 178.48px;"></div>
-                    <h2>Em construção 🛠️</h2>
-                </div>
-            </a>
-            <a target="_blank" href="#">
-                <div class="projetos">
-                    <img src="imagens/gestor-financeiro.png" alt="Gestor Financeiro">
-                    <h2>Em construção 🛠️</h2>
-                </div>
-            </a>
-            <a target="_blank" href="https://github.com/matheuspedrosam/SpaceX-API?tab=readme-ov-file">
-                <div class="projetos">
-                    <img src="imagens/spaceXAPI.png" alt="SpaceX-API">
-                    <h2>SpaceX-API (Vaga de estágio)</h2>
-                </div>
-            </a>
-        </div>
-
-        <h1>Projetos de Estudo Em Html/Css</h1>
-        <div class="projetos-container-html-css">
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/12%20-%20WildBeast/index.html">
-                <div class="projetos">
-                    <h2>WildBeast</h2>
-
-                    <img src="https://user-images.githubusercontent.com/99772255/265743407-3ac82e54-415b-45c4-a038-46eaedaf05be.png" alt="WildBeast">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/11%20-%20Landing%20Page/index.html">
-                <div class="projetos">
-                    <h2>Landing Page</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/265743278-05ea8e23-790b-4663-be23-40e6cc28472d.png" alt="Landing Page">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/10%20-%20beUty/index.html">
-                <div class="projetos">
-                    <h2>BeUty</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239776497-7ba1a2c4-eb0a-4a2f-a532-2e262857d80e.png" alt="beUty">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/09%20-%20login/index.html">
-                <div class="projetos">
-                    <h2>Login Responsivo</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239776838-1abc34f1-e268-487c-a3b2-b87f325f7be8.png" alt="login-responsivo">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/07%20-%20Flexblog/index.html">
-                <div class="projetos">
-                    <h2>Flexblog</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239776322-8de3d464-ff19-41ff-b70f-509ffc9b8ea0.png" alt="FlexBlog">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/06%20-%20Site%20Balle%20Bot/index.html">
-                <div class="projetos">
-                    <h2>Balle Bot</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239777205-0bac6e03-6262-47ce-a11e-884a6866e859.png" alt="Site Balle Bot">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/05%20-%20Figma%20Codelandia/index.html">
-                <div class="projetos">
-                    <h2>Figma Codelândia</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239768044-048fe98e-e234-4417-9267-1633f18ec338.png" alt="Figma Codelandia">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/02%20-%20Formulario/index.html">
-                <div class="projetos formulario">
-                    <h2>Formulário</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239776363-0f720de2-6211-4cfa-8ef3-48782db2adf2.png" alt="Formulario">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/04%20-%20Site%20Android/index.html">
-                <div class="projetos">
-                    <h2>Site Android</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239776432-ede5da9f-b791-43ae-8f8e-f6eb404f3f9d.png" alt="Site Android">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/03%20-%20Projeto%20Cordel/index.html">
-                <div class="projetos parallax">
-                    <h2>Efeito Parallax</h2>
-                    <img height="153px" width="300px" src="https://user-images.githubusercontent.com/99772255/169634869-2fbb396f-a33b-45df-83a2-0c11646e91f7.gif" alt="Projeto Cordel">
-                </div>
-            </a>
-        </div>
-        <h1>Projetos de Estudo Em JavaScript</h1>
-        <div class="projetos-container-js">
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/12%20-%20Jogo%20do%20Mario/index.html">
-                <div class="projetos rd-e-mario">
-                    <h2>Jogo do Mario</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239775234-f2e22f53-838d-48ce-a37a-742880b9a569.png" alt="Jogo do Mario">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/11%20-%20Calculadora/index.html">
-                <div class="projetos calculadora">
-                    <h2>Calculadora</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239775208-2a00be27-681e-4b95-b2ee-9201aea21e0b.png" alt="Calculadora">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/10%20-%20Validador%20de%20Formul%C3%A1rio/index.html">
-                <div class="projetos">
-                    <h2>Validador de Formulário</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239775164-086271a4-3a4f-46bd-b7bf-5ff46e2900d9.png" alt="Validador de Formulário">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/08%20-%20To%20Do%20List%20Avan%C3%A7ado/index.html">
-                <div class="projetos">
-                    <h2>To do List Avançado</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239775087-fcf622f6-6610-4006-8300-cdf5d21776f8.png" alt="To Do List Avançado">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/09%20-%20Controle%20De%20Financas/index.html">
-                <div class="projetos">
-                    <h2>Controle de Finanças</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239775141-86868e27-ac19-4908-8f98-25a1643342ee.png" alt="Controle de Finanças">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/07%20-%20Relogio%20Digital/index.html">
-                <div class="projetos rd-e-mario">
-                    <h2>Relógio Digital</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239775058-c767eab1-2131-481f-80b6-993ddab17e26.png" alt="Relogio Digital">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/06%20-%20SlideShow/index.html">
-                <div class="projetos slideshow">
-                    <h2>SlideShow</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239775028-43a63933-48de-49ff-9a83-cff1fb5eecf3.png" alt="SlideShow">
-                </div>
-            </a>
-            <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/05%20-%20DarkMode/index.html">
-                <div class="projetos darkmode">
-                    <h2>DarkMode</h2>
-                    <img src="https://user-images.githubusercontent.com/99772255/239775005-e233aa8a-beeb-4d16-a88c-5489be6da818.png" alt="DarkMode">
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <section id="skills">
-        <h1>Skills (🔥)</h1>
-        <div id="skills-container">
-            <div class="tecnologias html">
-                <h1><i style="color: #0000FF;" class="fa-brands fa-html5"></i>HTML</h1>
-                <h2>HyperText Markup Language</h2>
-                <p>
-                    É uma linguagem de marcação utilizada na construção de páginas na Web. Define o significado e a estrutura do conteúdo. A linguagem é responsável pelas adições de título, paráfrafos, imagens e muitos outros conteúdos.
-                </p>
+<body>
+    <div id="mainContainer">
+        <header id="header">
+            <div id="name-logo">
+                <a target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/">PEDROSA</a>
             </div>
-            <div class="tecnologias css">
-                <h1><i class="fa-brands fa-css3-alt"></i>Css</h1>
-                <h2>Cascading Style Sheets</h2>
-                <p>   
-                    O CSS é quem dá a estilização da página web, definindo cores, fontes, tamanhos, posicionamento e qualquer outro valor estético para os elementos da página.
-                </p>
-            </div>
-            <div class="tecnologias js">
-                <h1><i class="fa-brands fa-square-js"></i>JavaScript</h1>
-                <h2>Linguagem de Programação</h2>
-                <p> 
-                    O JavaScript é uma linguagem de programação interpretada estruturada, e tem como principal objetivo criar páginas dinâmincas, ele dá a interatividade que a página precisa, é uma das linguagens mais utilizadas no mundo.
-                </p>
-            </div>
-            <div class="tecnologias ruby">
-                <h1><i class="fa-solid fa-gem"></i> Ruby</h1>
-                <h2>Linguagem de Programação</h2>
-                <p>
-                    Ruby é uma linguagem de programação interpretada multiparadigma, de tipagem dinâmica e forte, com gerenciamento de memória automático, originalmente planejada e desenvolvida no Japão em 1995, por Yukihiro "Matz" Matsumoto, para ser usada como linguagem de script.
-                </p>
-            </div>
-            <div class="tecnologias git">
-                <h1><i class="fa-brands fa-git-alt"></i> Git</h1>
-                <h2>Versionador de código</h2>
-                <p>
-                    Git é o sistema de controle de versão open source mais usado no mundo atualmente! Ele é usado para controlar o histórico de alterações de arquivos e principalmente de projetos de desenvolvimento de software. Ele permite mais flexibilidade no fluxo de trabalho, segurança e desempenho.
-                </p>
-            </div>
-            <div class="tecnologias sql">
-                <h1><i class="fa-solid fa-database"></i> Sql</h1>
-                <h2>Linguagem de Programação</h2>
-                <p>
-                    SQL significa Standard Query Language, literalmente a linguagem padrão para realizar queries. A linguagem SQL é utilizada de maneira relativamente parecida entre os principais bancos de dados relacionais do mercado: Oracle, MySQL, MariaDB, PostgreSQL, Microsoft SQL Server, entre muitos outros.
-                </p>
-            </div>
-            <div class="tecnologias figma">
-                <h1><i class="fa-brands fa-figma"></i> Figma (Basic)</h1>
-                <h2>Software de Protótipos</h2>
-                <p>
-                    Figma é um editor gráfico de vetor e prototipagem de projetos de design baseado principalmente no navegador web, com ferramentas offline adicionais para aplicações desktop para GNU/Linux, macOS e Windows.
-                </p>
-            </div>
-            <div class="tecnologias node">
-                <h1><i class="fa-brands fa-node-js"></i> Node Js</h1>
-                <h2>FrameWork</h2>
-                <p>
-                    O Node. js é uma tecnologia usada para executar o JavaScript server-side. Isso quer dizer que ele permite a execução da linguagem JavaScript fora do navegador. Nesse sentido, com essa tecnologia, é possível construir diversas aplicações Web, como websites, APIs e microsserviços.
-                </p>
-            </div>
-            <div class="tecnologias react">
-                <h1><i class="fa-brands fa-react"></i> React</h1>
-                <h2>FrameWork</h2>
-                <p>
-                    React é um framework JavaScript criado pelo Facebook (atual Meta) que é usado para criar interfaces de usuário (UI) em aplicativos web. Ele é popular por ser fácil de usar, altamente flexível e escalável, e é usado por muitas empresas de tecnologia, incluindo o Facebook, Instagram e Airbnb.
-                </p>
-            </div>
-            <div class="tecnologias bootstrapt">
-                <h1><i class="fa-brands fa-bootstrap"></i> Bootstrapt</h1>
-                <h2>FrameWork</h2>
-                <p>
-                    Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.
-                </p>
-            </div>
-            <!-- <div class="tecnologias wordpress">
-                <h1><i class="fa-brands fa-wordpress"></i> Wordpress</h1>
-                <h2>Sistema de Gerenciamento de Conteúdo</h2>
-                <p>
-                    WordPress é um sistema livre e aberto de gestão de conteúdo para internet, baseado em PHP com banco de dados MySQL, executado em um servidor interpretador, voltado principalmente para a criação de páginas eletrônicas e blogs online.
-                </p>
-            </div> -->
-        </div>
-    </section>
-
-    <footer id="contato">
-        <div id="footer-container1">
-            <div id="footer-container1-info">
-                <a target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/">
-                    <div id="avatar-footer"><img src="imagens/avatar.png" alt="">
-                    </div>
-                </a>
-                <h1>Matheus Pedrosa</h1>
-                <p id="footer-front">Web Developer | Front-End</p>
-                <p>Me mande um E-mail</p>
-                <a target="_blank" href="mailto:devpedrosamatheus@gmail.com">
-                    <h3>devpedrosamatheus@gmail.com</h3>
-                </a>
-            </div>
-            <div id="footer-container1-conversar">
-                <h1>Vamos Conversar!</h1>
-                <p>Eu estarei sempre aberto para discutir o seu projeto, melhorar sua presença online ou ajudar com seus desafios de desenvolvimento</p>
-                <a target="_blank" href="https://www.instagram.com/devpedrosam/"><i class="fa-brands fa-instagram"></i></a>
-                <a target="_blank" href="https://github.com/matheuspedrosam"><i class="fa-brands fa-github"></i></a>
-                <a target="_blank" href="https://wa.me/+5582988166281"><i class="fa-brands fa-whatsapp"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-        </div>
-        <div id="footer-container2">
-            <nav> 
-                <a href="#sessao-principal">Inicio</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#projetos">Projetos</a>
-                <a href="#skills">skills</a>
+            <nav>
+                <a href="#sobre" id="nav-sobre">Sobre</a>
+                <a href="#projetos" id="nav-projetos">Projetos</a>
+                <a href="#skills" id="nav-skills">Skills</a>
+                <a href="#contato" id="nav-contato">Contato</a>
             </nav>
-        </div>
-    </footer>
+            <div id="perfis-sociais">
+                <a id="insta" target="_blank" href="https://www.instagram.com/devpedrosam/"><i class="fa-brands fa-instagram"></i></a>
+                <a id="github" target="_blank" href="https://github.com/matheuspedrosam"><i class="fa-brands fa-github"></i></a>
+                <a id="whats" target="_blank" href="https://wa.me/+5582988166281"><i class="fa-brands fa-whatsapp"></i></a>
+                <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </header>
+        <section id="sessao-principal">
+            <div id="frase-principal">
+                <h1>
+                    A arte de programar consiste em organizar e dominar complexidade
+                    - <span id="Edsger">Edsger W. Dijkstra</span>
+                </h1>
+            </div>
+            <div id="primeira-apresentacao">
+                <p>
+                    Um <strong>Web Developer</strong> e amante da área em MCZ/AL.
+                    Eu venho focado nos estudos na parte do Front-End,
+                    lembrando sempre da responsividade.
+                </p>
+                <p style="color: gray; font-size: 12px;">
+                    Obs.: Esse portfólio, foi feito no começo de meus estudos (Com + algumas atualizações, ao longo da faculdade). Então depois irei recriar para uma nova versão.
+                </p>
+            </div>
+            <div id="foto-perfil">
+                <img width="400px" src="imagens/Foto de perfil att.png" alt="">
+            </div>
+            <div id="linkedin-youtube-and-curriculo-container">
+                <a target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/">
+                    <button id="linkedin-btn">
+                        <i class="fa-brands fa-linkedin" style="color: var(--cor-cinza);"></i><span>Linked-In</span>
+                    </button>
+                </a>
+                <a href="Currículo Profissional.pdf" download="Currículo">
+                    <button id="curriculo-btn">
+                        <i class="fa fa-download" aria-hidden="true"></i><span>Currículo</span>
+                    </button>
+                </a>
+                <a id="youtube-btn-link" target="_blank" href="https://www.youtube.com/@devpedrosam">
+                    <button id="youtube-btn">
+                        <img width="25px" src="imagens/youtube-btn.png" alt=""> Youtube
+                    </button>
+                </a>
+            </div>
+        </section>
+        <section id="infos">
+            <div class="informacoes">
+                <h2>21</h2>
+                <p>Anos</p>
+            </div>
+            <div class="informacoes">
+                <h2>3</h2>
+                <p>Anos de Estudo</p>
+            </div>
+            <div class="informacoes">
+                <h2>6</h2>
+                <p>Certificados</p>
+            </div>
+            <div class="informacoes">
+                <h2>7°</h2>
+                <p>Período</p>
+            </div>
+        </section>
+        <section id="sobre">
+            <div class="vanila-tilt" id="img-sobre">
+                <img src="imagens/Task-bro.svg" alt="">
+            </div>
+            <div id="div-sobre">
+                <h3>Quem é Matheus Pedrosa?</h3>
+                <h1><i class="fa-solid fa-street-view"></i> Um pouco sobre mim</h1>
+                <p>
+                    Sigo a carreira voltada na área de Tecnologia da Informação, comecei com o foco para o desenvolvimento de projetos web na parte do Front-End, entretando estou buscando conhecimento em desenvolvimento de softwares web de uma forma geral (Full Stack). Tenho conhecimento em banco de dados, e já exercitei bastante minha lógica de programação. Estou sempre pensando no futuro, desejo fazer pós, doutorado, mestrado... Quem sabe conhecer a área de mobile, I.A, de hacking / segurança, redes...
+                </p>
+                <p>
+                    Atualmente estou fazendo faculdade para bacharelado em Sistemas De Informação, com conclusão prevista para 2025.1, e possuo ensino médio completo, me formei no colégio Santa Madalena Sofia em 2020. E estou em busca do meu primeiro estágio.
+                </p>
+            </div>
+        </section>
+        <section id="projetos">
+            <div class="projetosAndTitleContainer">
+                <h1>Projetos Profissionais  <i class="fa-solid fa-user-tie"></i></h1>
+                <div class="projetosContainer">
+                    <a target="_blank" href="https://sootzitnsify.web.app/">
+                        <div class="projetos">
+                            <img src="imagens/Sootz-landingpage.png" alt="">
+                            <h2>Sootz Bpm (Junior)</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://github.com/matheuspedrosam/SpaceX-API?tab=readme-ov-file">
+                        <div class="projetos">
+                            <img src="imagens/spaceXAPI.png" alt="SpaceX-API">
+                            <h2>SpaceX-API (Vaga de estágio)</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="#">
+                        <div class="projetos">
+                            <img src="imagens/gestor-financeiro.png" alt="Gestor Financeiro">
+                            <h2>Gestor Financeiro (🛠️)</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
-    <script src="script.js"></script>
-    <script src="vanilla-tilt.babel.js"></script>
-    <script type="text/javascript">
-        VanillaTilt.init(document.querySelector(".vanila-tilt"), {
-            max: 25,
-            speed: 400
-    });
-    
-    //It also supports NodeList
-    VanillaTilt.init(document.querySelectorAll(".vanila-tilt"));
-    </script>
+            <div class="projetosAndTitleContainer">
+                <h1>Estudos em Node e React <i class="fa-brands fa-node-js"></i><i class="fa-brands fa-react"></i></h1>
+                <div class="projetosContainer">
+                    <a target="_blank" href="#">
+                        <div class="projetos">
+                            <img src="imagens/reactgram2.png" alt="reactgram">
+                            <h2>Reactgram</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="#">
+                        <div class="projetos">
+                            <img src="imagens/miniblog.png" alt="miniblog">
+                            <h2>Mini Blog</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="projetosAndTitleContainer">
+                <h1>Estudos Em JavaScript <i class="fa-brands fa-square-js"></i></h1>
+                <div class="projetosContainer">
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/12%20-%20Jogo%20do%20Mario/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239775234-f2e22f53-838d-48ce-a37a-742880b9a569.png" alt="Jogo do Mario">
+                            <h2>Jogo do Mario</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/11%20-%20Calculadora/index.html">
+                        <div class="projetos calculadora">
+                            <img src="https://user-images.githubusercontent.com/99772255/239775208-2a00be27-681e-4b95-b2ee-9201aea21e0b.png" alt="Calculadora">
+                            <h2>Calculadora</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/10%20-%20Validador%20de%20Formul%C3%A1rio/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239775164-086271a4-3a4f-46bd-b7bf-5ff46e2900d9.png" alt="Validador de Formulário">
+                            <h2>Validador de Formulário</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/08%20-%20To%20Do%20List%20Avan%C3%A7ado/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239775087-fcf622f6-6610-4006-8300-cdf5d21776f8.png" alt="To Do List Avançado">
+                            <h2>To do List Avançado</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/09%20-%20Controle%20De%20Financas/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239775141-86868e27-ac19-4908-8f98-25a1643342ee.png" alt="Controle de Finanças">
+                            <h2>Controle de Finanças</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-JavaScript/07%20-%20Relogio%20Digital/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239775058-c767eab1-2131-481f-80b6-993ddab17e26.png" alt="Relogio Digital">
+                            <h2>Relógio Digital</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="projetosAndTitleContainer">
+                <h1>Estudos Em Html/Css <i class="fa-brands fa-html5"></i></h1>
+                <div class="projetosContainer">
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/12%20-%20WildBeast/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/265743407-3ac82e54-415b-45c4-a038-46eaedaf05be.png" alt="WildBeast">
+                            <h2>WildBeast</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/11%20-%20Landing%20Page/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/265743278-05ea8e23-790b-4663-be23-40e6cc28472d.png" alt="Landing Page">
+                            <h2>Landing Page</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/10%20-%20beUty/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239776497-7ba1a2c4-eb0a-4a2f-a532-2e262857d80e.png" alt="beUty">
+                            <h2>BeUty</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/09%20-%20login/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239776838-1abc34f1-e268-487c-a3b2-b87f325f7be8.png" alt="login-responsivo">
+                            <h2>Login Responsivo</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/07%20-%20Flexblog/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239776322-8de3d464-ff19-41ff-b70f-509ffc9b8ea0.png" alt="FlexBlog">
+                            <h2>Flexblog</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/06%20-%20Site%20Balle%20Bot/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239777205-0bac6e03-6262-47ce-a11e-884a6866e859.png" alt="Site Balle Bot">
+                            <h2>Balle Bot</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/05%20-%20Figma%20Codelandia/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239768044-048fe98e-e234-4417-9267-1633f18ec338.png" alt="Figma Codelandia">
+                            <h2>Figma Codelândia</h2>
+                        </div>
+                    </a>
+                    <a target="_blank" href="https://matheuspedrosam.github.io/Projetos-Html-e-Css/04%20-%20Site%20Android/index.html">
+                        <div class="projetos">
+                            <img src="https://user-images.githubusercontent.com/99772255/239776432-ede5da9f-b791-43ae-8f8e-f6eb404f3f9d.png" alt="Site Android">
+                            <h2>Site Android</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h1>Skills (🔥)</h1>
+            <div id="skills-container">
+                <div class="tecnologias html">
+                    <i class="fa-brands fa-html5"></i>
+                    <h1>Html</h1>
+                </div>
+                <div class="tecnologias css">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <h1>Css</h1>
+                </div>
+                <div class="tecnologias js">
+                    <i class="fa-brands fa-square-js"></i>
+                    <h1>JavaScript</h1>
+                </div>
+                <div class="tecnologias ruby">
+                    <i class="fa-solid fa-fire"></i>
+                    <h1>Firebase</h1>
+                </div>
+                <div class="tecnologias git">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <h1>Git</h1>
+                </div>
+                <div class="tecnologias sql">
+                    <i class="fa-solid fa-database"></i>
+                    <h1>Sql</h1>
+                </div>
+                <div class="tecnologias figma">
+                    <i class="fa-brands fa-figma"></i>
+                    <h1>Figma</h1>
+                </div>
+                <div class="tecnologias node">
+                    <i class="fa-brands fa-node-js"></i>
+                    <h1>Node Js</h1>
+                </div>
+                <div class="tecnologias react">
+                    <i class="fa-brands fa-react"></i>
+                    <h1>React</h1>
+                </div>
+                <div class="tecnologias bootstrapt">
+                    <i class="fa-brands fa-bootstrap"></i>
+                    <h1>Bootstrapt</h1>
+                </div>
+            </div>
+        </section>
+        <footer id="contato">
+            <div id="footer-container1">
+                <div id="footer-container1-info">
+                    <a target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/">
+                        <div id="avatar-footer"><img src="imagens/avatar.png" alt="">
+                        </div>
+                    </a>
+                    <h1>Matheus Pedrosa</h1>
+                    <p id="footer-front">Web Developer | Front-End</p>
+                    <p>Me mande um E-mail</p>
+                    <a target="_blank" href="mailto:devpedrosamatheus@gmail.com">
+                        <h3>devpedrosamatheus@gmail.com</h3>
+                    </a>
+                </div>
+                <div id="footer-container1-conversar">
+                    <h1>Vamos Conversar!</h1>
+                    <p>Eu estarei sempre aberto para discutir o seu projeto, melhorar sua presença online ou ajudar com seus desafios de desenvolvimento</p>
+                    <a target="_blank" href="https://www.instagram.com/devpedrosam/"><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="https://github.com/matheuspedrosam"><i class="fa-brands fa-github"></i></a>
+                    <a target="_blank" href="https://wa.me/+5582988166281"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/matheus-pedrosa2002/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
