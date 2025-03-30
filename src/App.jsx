@@ -1,6 +1,5 @@
 import './App.css'
 import { useEffect, useState } from 'react'
-import Loader from './components/Loader/Loader'
 import { Portfolio } from './pages/Portfolio/Portfolio';
 import { Progress } from './components/ui/progress';
 
@@ -18,7 +17,7 @@ function App() {
                 }
                 return prev + 1;
             });
-        }, 20);
+        }, 10);
 
         return () => clearInterval(interval);
     }, []);

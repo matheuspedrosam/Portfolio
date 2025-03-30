@@ -1,9 +1,5 @@
-import { Moon, Sun, CodeXmlIcon, Github, Linkedin, File, User, Link, FileDown, ExternalLink, Download } from "lucide-react";
+import { Moon, Sun, CodeXmlIcon, Github, Linkedin, Link, FileDown, ExternalLink, Download } from "lucide-react";
 import { useTheme } from "@/components/theme-provider"
-import { useNavigate } from "react-router-dom";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import AvatarUI from "../ui/Custom/AvatarUI/AvatarUI";
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "../ui/hover-card";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { useState } from "react";
 import { Button } from "../ui/button";
@@ -19,9 +15,14 @@ export default function Header() {
                 <h1 className={`text-xl font-bold hidden sm:hidden md:block lg:block`}>Pedrosa</h1>
             </div>
             <div className="flex items-center gap-2">
+                <TooltipUI label="Versão 1">
+                    <a href="https://matheuspedrosam.github.io/Portfolio/" target="_blank">
+                        <Button variant="ghost" className="!px-2.5 !py-0 cursor-default" asDiv>V¹</Button>
+                    </a>
+                </TooltipUI>
                 <MyLinks />
                 <TooltipUI label="Theme">
-                    <Button asDiv variant="ghost" className="!py-0 !px-2.5" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+                    <Button asDiv variant="ghost" className="!py-0 !px-2.5 font-normal" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
                         {theme === "light" ? <Sun /> : <Moon />}
                     </Button>
                 </TooltipUI>

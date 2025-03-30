@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import Marquee from "@/components/ui/Custom/Marquee/Marquee";
 import { useTheme } from "@/components/theme-provider";
 import { useEffect, useState } from "react";
+import { certifications, projects } from "./data";
 
 export function Portfolio() {
   const [isSmallDevice, setIsSmallDevice] = useState(window.innerWidth <= 1024);
@@ -91,21 +92,23 @@ function Stacks() {
 function Projects() {
   return (
     <CustomCard title="My projects" icon="BriefcaseBusiness" description="Works gallery">
-      <div className="grid justify-center h-full">
+      <div className="grid justify-center h-fit">
         <Carousel className="w-full max-w-2xs min-[400px]:max-w-xs sm:max-w-sm mb-12 sm:mb-0 min-[1300px]:!max-w-xs min-[1600px]:!max-w-sm">
-          <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+          <CarouselContent className="h-100">
+            {projects.map((project, index) => (
               <CarouselItem key={index}>
-                <Card className="p-4">
-                  <CardContent className="grid gap-4 p-0">
-                    <div className="h-fit">
-                      <img src="https://matheuspedrosam.github.io/Portfolio/imagens/jackTheJumper.png" className="rounded-sm w-full h-45" />
+                <Card className="p-4 h-full">
+                  <CardContent className="flex flex-col justify-between p-0 h-full">
+                    <div>
+                      <div className="h-fit mb-4">
+                        <img src={project.image} className="rounded-sm w-full h-45" />
+                      </div>
+                      <h2 className="font-bold">{project.title}</h2>
                     </div>
-                    <h2 className="font-bold">O Menino Saltador</h2>
                     <p className="text-sm">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint, obcaecati facilis blanditiis temporibus ea error magnam tenetur laboriosam perferendis quaerat voluptatem optio, quasi ad id officia iure. Itaque, et distinctio?
+                      {project.description}
                     </p>
-                    <Button>Ver</Button>
+                    <a href={project.link} target="_blank"><Button className="w-full">Ver</Button></a>
                   </CardContent>
                 </Card>
               </CarouselItem>
@@ -165,15 +168,25 @@ function Me() {
           </div>
         </div>
 
-        <div className={`p-2 ${theme === "light" ? 'bg-white' : 'bg-neutral-900'} flex gap-2 flex-wrap rounded-sm`}>
+        <div className={`${theme === "light" ? 'bg-white' : 'bg-neutral-900'} flex gap-2 flex-wrap rounded-sm`}>
           <Tag icon="MapPin" description="Brazil" className="min-w-20" />
           <Tag icon="Globe" description="English and Portuguese" className="min-w-20" />
           <Tag icon="Flag" description="Software Developer" className="min-w-20" />
           <Tag icon="Flag" description="Bachalor of Technology" className="min-w-20" />
         </div>
         <div className="flex gap-4">
-          <Button className="flex-1"><IconComponent icon="Linkedin" className={`${theme === "light" ? 'text-neutral-400' : 'text-neutral-800'}`} /> Linked-in</Button>
-          <Button className="flex-1"><IconComponent icon="Mail" className={`${theme === "light" ? 'text-neutral-400' : 'text-neutral-800'}`} /> E-mail</Button>
+          <a href="https://www.linkedin.com/in/matheus-pedrosa2002/" target="_blank" className="flex-1">
+            <Button className="w-full">
+              <IconComponent icon="Linkedin" className={`${theme === "light" ? 'text-neutral-400' : 'text-neutral-800'}`} />
+              Linked-in
+            </Button>
+          </a>
+          <a href="mailto:matheuspedrosa2002@gmail.com" target="_blank" className="flex-1">
+            <Button className="w-full">
+              <IconComponent icon="Mail" className={`${theme === "light" ? 'text-neutral-400' : 'text-neutral-800'}`} />
+              E-mail
+            </Button>
+          </a>
         </div>
       </div>
     </CustomCard>
@@ -199,26 +212,39 @@ function AboutMe() {
   return (
     <CustomCard title="About me" icon="Info" description="Know me more">
       <div className="max-h-80 overflow-y-auto custom-scrollbar">
-        <p className="block mb-4">
-          I am excited to apply for the Software Developer position at [Company Name]. With a strong background in web development and a passion for creating efficient and scalable applications, I am eager to bring my expertise in JavaScript, React, and Node.js to your team.
-        </p>
-        <p className="block mb-4">
-          During my time as a software developer, I have worked extensively with front-end and back-end technologies, developing user-friendly applications that enhance customer experiences. In my most recent role, I contributed to building a dynamic web application that improved user engagement by 30%. I take pride in writing clean, maintainable code and collaborating with cross-functional teams to deliver high-quality software solutions.
-        </p>
-        <p className="block mb-4">
-          Beyond my technical skills, I am committed to continuous learning and problem-solving. My experience working on full-stack projects has honed my ability to debug complex issues, optimize performance, and implement best practices in software development.
+        <p class="mb-4">
+          Hi, I'm <strong>Matheus Pedrosa</strong>, a passionate Software Developer with a strong focus on JavaScript, React, and Node.js.
+          I love building applications that are not only functional but also intuitive and scalable. My journey in development has been fueled by a deep curiosity for solving complex problems and optimizing digital experiences.
         </p>
 
-        <p className="block mb-4">
-          I am particularly drawn to [Company Name] because of its commitment to innovation and its focus on delivering cutting-edge solutions. I believe my skills align well with your company's mission, and I am eager to contribute to your ongoing success.
+        <p class="mb-6">
+          With experience in full-stack development, I have worked on projects ranging from interactive web applications to backend architectures that power seamless user experiences.
+          I take pride in writing clean, maintainable code and following best practices to ensure performance, security, and scalability.
         </p>
 
-        <p className="block mb-4">
-          I welcome the opportunity to discuss how my experience and skills can benefit your team. Thank you for your time and consideration. I look forward to your response.
+        <h2 class="text-2xl font-semibold mb-3">What I Bring to the Table:</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Front-end Expertise:</strong> Crafting responsive and dynamic interfaces using React and modern UI frameworks.</li>
+          <li><strong>Back-end Development:</strong> Building robust APIs and server-side applications with Node.js and Express.</li>
+          <li><strong>Database Management:</strong> Working with Firebase, Firestore, and SQL/NoSQL databases to store and manage data efficiently.</li>
+          <li><strong>Performance Optimization:</strong> Debugging, refactoring, and improving applications to ensure smooth user experiences.</li>
+          <li><strong>Collaboration & Problem-Solving:</strong> Working with cross-functional teams, adapting to challenges, and continuously learning.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-6 mb-3">Projects & Passion</h2>
+        <p class="mb-6">
+          My early projects were focused on solving everyday problems. One of my first creations was a Python bot that sent my parents the daily list of Airbnb guests via WhatsApp, automating a task that saved them valuable time. 
+          This experience reinforced my belief that technology can simplify lives and streamline processes.
         </p>
 
-        <p className="block mb-4">
-          Best regards, [Your Name]
+        <p class="mb-6">
+          Beyond coding, I am always eager to explore new technologies, contribute to open-source projects, and stay up-to-date with the latest industry trends.
+          I'm also interested in furthering my education and exploring opportunities to expand my expertise, including a potential master's degree in 🇮🇹.
+        </p>
+
+        <h2 class="text-2xl font-semibold mb-3">Let's Connect!</h2>
+        <p class="mb-6">
+          I'm always open to new opportunities, collaborations, and discussions about tech, innovation, and problem-solving. Feel free to reach out—I'd love to chat! 🚀
         </p>
       </div>
     </CustomCard >
@@ -231,10 +257,10 @@ function Courses() {
       <div className="grid justify-center items-center h-full">
         <Carousel className="w-full max-w-3xs mb-12 sm:mb-0">
           <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+            {certifications.map((certification, index) => (
               <CarouselItem key={index}>
                 <Card className="p-0 overflow-hidden">
-                  <img src="/Certificado ReactJs - Udemy.jpg" className="block w-full h-full rounded-sm m-auto" />
+                  <img src={certification.image} className="block w-full h-full rounded-sm m-auto" />
                 </Card>
               </CarouselItem>
             ))}
