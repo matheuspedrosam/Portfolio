@@ -1,0 +1,30 @@
+/* Custom ScrollBar */
+
+/* Tema Claro */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #8a8a8a;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+/* Tema Esuro */
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #777777;
+    border-radius: 10px;
+}
+
+.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #bbbbbb;
+}

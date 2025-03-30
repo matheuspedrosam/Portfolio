@@ -1,0 +1,17 @@
+.marqueeContent {
+    animation: scroll 48s linear infinite;
+}
+
+.marqueeContent:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-300%);
+    }
+}
