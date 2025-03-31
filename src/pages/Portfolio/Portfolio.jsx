@@ -15,7 +15,6 @@ export function Portfolio() {
 
   useEffect(() => {
     const handleResize = () => {
-      console.log("E");
       setIsSmallDevice(window.innerWidth <= 1024);
     };
 
@@ -73,6 +72,7 @@ function Stacks() {
         <Item img={"/node-logo.svg"} description="Node" />
         <Item img={"/tailwind-logo.svg"} description="Tailwind" />
         <Item img={"/javascript-logo.svg"} description="Javascript" />
+        <Item img={"/typescript-logo.svg"} description="Typescript" />
         <Item img={"/html-5-logo.svg"} description="Html5" />
         <Item img={"/css-3-logo.svg"} description="Css3" />
         <Item img={"/mongodb-logo.svg"} description="Mongodb" />
@@ -83,7 +83,9 @@ function Stacks() {
         <Item img={"/vscode-logo.svg"} description="Vscode" />
         <Item img={"/nextJs-logo.svg"} description="NextJs" />
         <Item img={"/nestJs-logo.svg"} description="NestJs" />
+        <Item img={"/python-logo.svg"} description="Python" />
         <Item img={"/bootstrap-logo.svg"} description="Bootstrap" />
+        <Item img={"/github-logo.svg"} description="Github" />
       </div>
     </CustomCard>
   )
