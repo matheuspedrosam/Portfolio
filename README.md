@@ -1,11 +1,14 @@
 # My Portfolio as a developer
 
-<a target="_blank" href="https://matheuspedrosam.github.io/Portfolio/">Link here</a> 👈
+<a target="_blank" href="https://pedrosa-portfolio.web.app/">Link here</a> 👈
 
-![image](https://github.com/matheuspedrosam/Portfolio/assets/99772255/966e3cfa-171d-4a61-8efb-2a632f94af28)
-##
-## Well.. Inside of it there's some exercies/projects in HTML/CSS, Js, React, Nodejs, Ts...
+![Captura de tela 2025-03-31 150042](https://github.com/user-attachments/assets/89f323ee-df93-43d9-9377-985a6162dfd7)
+
+## There's some exercies/projects inside of it, in HTML/CSS, Js, React, Nodejs, Ts...
 Utilized techs (for creation of it):
+* React
+* ShadcnUI
+* Tailwind
 * HTML
 * CSS
 * JS
