@@ -15,9 +15,9 @@ function App() {
                     setLoading(false);
                     return 100;
                 }
-                return prev + 1;
+                return prev + 5;
             });
-        }, 10);
+        }, 50);
 
         return () => clearInterval(interval);
     }, []);
@@ -27,7 +27,7 @@ function App() {
             <div className='grid min-h-dvh justify-center items-center'>
                 <div className='grid gap-2'>
                     <Progress value={progress} className="w-full" />
-                    <p className='text-sm'>Preparing you for the best portfolio...</p>
+                    <p className='text-sm'>Preparing you for my portfolio...</p>
                 </div>
             </div>
         );

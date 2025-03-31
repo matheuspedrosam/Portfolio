@@ -15,6 +15,7 @@ export function Portfolio() {
 
   useEffect(() => {
     const handleResize = () => {
+      console.log("E");
       setIsSmallDevice(window.innerWidth <= 1024);
     };
 
@@ -24,7 +25,7 @@ export function Portfolio() {
 
   return (
     <PageContainer className="min-h-dvh">
-      <Header />
+      <Header isSmallDevice={isSmallDevice} />
       <main className="grid grid-cols-1 p-4 gap-4 lg:grid-cols-2 xl:grid-cols-3">
 
         <SubGridContainer>
@@ -42,7 +43,7 @@ export function Portfolio() {
         </SubGridContainer>
 
         <SubGridContainer className="col-span-1 lg:col-span-2 xl:col-span-1">
-          <div className="grid gap-4 grid-cols-1 lg:grid-cols-2 xl:grid-cols-1">
+          <div className="grid gap-4 grid-cols-1 xl:grid-cols-1">
             <AboutMe />
             <Courses />
             <Services />
@@ -66,7 +67,7 @@ function SubGridContainer({ children, className }) {
 
 function Stacks() {
   return (
-    <CustomCard title="My stacks" icon="Layers" description="Software Tools">
+    <CustomCard id="stacks" title="My stacks" icon="Layers" description="Software Tools">
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-1 max-h-50 overflow-y-auto custom-scrollbar md:grid-cols-3 lg:grid-cols-3">
         <Item img={"/react-logo.svg"} description="React" />
         <Item img={"/node-logo.svg"} description="Node" />
@@ -91,9 +92,9 @@ function Stacks() {
 
 function Projects() {
   return (
-    <CustomCard title="My projects" icon="BriefcaseBusiness" description="Works gallery">
+    <CustomCard id="projects" title="My projects" icon="BriefcaseBusiness" description="Works gallery">
       <div className="grid justify-center h-fit">
-        <Carousel className="w-full max-w-2xs min-[400px]:max-w-xs sm:max-w-sm mb-12 sm:mb-0 min-[1300px]:!max-w-xs min-[1600px]:!max-w-sm">
+        <Carousel className="w-full max-w-2xs min-[380px]:max-w-xs sm:max-w-sm mb-12 sm:mb-0 min-[1300px]:!max-w-xs min-[1600px]:!max-w-sm">
           <CarouselContent className="h-100">
             {projects.map((project, index) => (
               <CarouselItem key={index}>
@@ -101,14 +102,14 @@ function Projects() {
                   <CardContent className="flex flex-col justify-between p-0 h-full">
                     <div>
                       <div className="h-fit mb-4">
-                        <img src={project.image} className="rounded-sm w-full h-45" />
+                        <img src={project.image} className="rounded-sm w-full border" />
                       </div>
                       <h2 className="font-bold">{project.title}</h2>
                     </div>
                     <p className="text-sm">
                       {project.description}
                     </p>
-                    <a href={project.link} target="_blank"><Button className="w-full">Ver</Button></a>
+                    <a href={project.link} target="_blank"><Button className="w-full">See</Button></a>
                   </CardContent>
                 </Card>
               </CarouselItem>
@@ -125,7 +126,7 @@ function Projects() {
 function Infos() {
   return (
     <>
-      <CustomCard>
+      <CustomCard id="infos">
         <div className="grid h-full gap-4">
           <h2 className="font-bold text-5xl text-center">04<span className="font-semibold">y</span></h2>
           <Tag icon="GraduationCap" description="Of study" descClassName="lg:text-xs xl:text-sm" />
@@ -151,7 +152,7 @@ function Me() {
   const { theme } = useTheme();
 
   return (
-    <CustomCard>
+    <CustomCard id="me">
       <div className="grid gap-4">
         <div className="flex gap-4">
           <AvatarUI image="/Com Recorte.jpg" className="rounded-sm size-40 max-[390px]:size-30" />
@@ -195,8 +196,8 @@ function Me() {
 
 function Skills() {
   return (
-    <CustomCard title="My skills" icon="Grid2x2" description="Software skills">
-      <div className="grid gap-2 overflow-y-auto h-60 custom-scrollbar">
+    <CustomCard id="skills" title="My skills" icon="Grid2x2" description="Software skills">
+      <div className="grid gap-2 overflow-y-auto h-64 custom-scrollbar">
         <Item icon="Eye" description="Front-end Developing" />
         <Item icon="Server" description="Back-end Developing" />
         <Item icon="Database" description="Database" />
@@ -210,20 +211,20 @@ function Skills() {
 
 function AboutMe() {
   return (
-    <CustomCard title="About me" icon="Info" description="Know me more">
-      <div className="max-h-80 overflow-y-auto custom-scrollbar">
-        <p class="mb-4">
+    <CustomCard id="aboutMe" title="About me" icon="Info" description="Know me more" className="lg:col-span-2">
+      <div className="xl:!h-80 overflow-y-auto custom-scrollbar">
+        <p className="mb-4">
           Hi, I'm <strong>Matheus Pedrosa</strong>, a passionate Software Developer with a strong focus on JavaScript, React, and Node.js.
           I love building applications that are not only functional but also intuitive and scalable. My journey in development has been fueled by a deep curiosity for solving complex problems and optimizing digital experiences.
         </p>
 
-        <p class="mb-6">
+        <p className="mb-6">
           With experience in full-stack development, I have worked on projects ranging from interactive web applications to backend architectures that power seamless user experiences.
           I take pride in writing clean, maintainable code and following best practices to ensure performance, security, and scalability.
         </p>
 
-        <h2 class="text-2xl font-semibold mb-3">What I Bring to the Table:</h2>
-        <ul class="list-disc pl-5 space-y-2">
+        <h2 className="text-2xl font-semibold mb-3">What I Bring to the Table:</h2>
+        <ul className="list-disc pl-5 space-y-2">
           <li><strong>Front-end Expertise:</strong> Crafting responsive and dynamic interfaces using React and modern UI frameworks.</li>
           <li><strong>Back-end Development:</strong> Building robust APIs and server-side applications with Node.js and Express.</li>
           <li><strong>Database Management:</strong> Working with Firebase, Firestore, and SQL/NoSQL databases to store and manage data efficiently.</li>
@@ -231,19 +232,19 @@ function AboutMe() {
           <li><strong>Collaboration & Problem-Solving:</strong> Working with cross-functional teams, adapting to challenges, and continuously learning.</li>
         </ul>
 
-        <h2 class="text-2xl font-semibold mt-6 mb-3">Projects & Passion</h2>
-        <p class="mb-6">
+        <h2 className="text-2xl font-semibold mt-6 mb-3">Projects & Passion</h2>
+        <p className="mb-6">
           My early projects were focused on solving everyday problems. One of my first creations was a Python bot that sent my parents the daily list of Airbnb guests via WhatsApp, automating a task that saved them valuable time. 
           This experience reinforced my belief that technology can simplify lives and streamline processes.
         </p>
 
-        <p class="mb-6">
-          Beyond coding, I am always eager to explore new technologies, contribute to open-source projects, and stay up-to-date with the latest industry trends.
+        <p className="mb-6">
+          Beyond coding, I am always eager to explore new technologies, and stay up-to-date with the latest industry trends.
           I'm also interested in furthering my education and exploring opportunities to expand my expertise, including a potential master's degree in 🇮🇹.
         </p>
 
-        <h2 class="text-2xl font-semibold mb-3">Let's Connect!</h2>
-        <p class="mb-6">
+        <h2 className="text-2xl font-semibold mb-3">Let's Connect!</h2>
+        <p className="mb-6">
           I'm always open to new opportunities, collaborations, and discussions about tech, innovation, and problem-solving. Feel free to reach out—I'd love to chat! 🚀
         </p>
       </div>
@@ -253,7 +254,7 @@ function AboutMe() {
 
 function Courses() {
   return (
-    <CustomCard title="My certifications" icon="GraduationCap" description="Some courses">
+    <CustomCard id="certifications" title="My certifications" icon="GraduationCap" description="Some courses" className="lg:col-start-1 lg:col-end-3">
       <div className="grid justify-center items-center h-full">
         <Carousel className="w-full max-w-3xs mb-12 sm:mb-0">
           <CarouselContent>
@@ -275,12 +276,12 @@ function Courses() {
 
 function Services() {
   return (
-    <CustomCard className="overflow-hidden lg:col-span-2 xl:col-span-1">
+    <CustomCard id="softSkills" className="overflow-hidden lg:col-span-2 xl:col-span-1">
       <div className="grid items-center h-full">
         <Marquee gap={2} className="!p-0 cursor-default">
           <Item icon="Handshake" description="Team work" hover={false} />
           <Item icon="Menu" description="Web developer" hover={false} />
-          <Item icon="MonitorSmartphone" description="Responsible design" hover={false} />
+          <Item icon="MonitorSmartphone" description="Responsive design" hover={false} />
           <Item icon="ScanEye" description="Problem solving" hover={false} />
           <Item icon="Database" description="Database Management" hover={false} />
           <Item icon="Cloud" description="Cloud Skills" hover={false} />
@@ -288,7 +289,7 @@ function Services() {
           <Item icon="Smartphone" description="Mobile Development" hover={false} />
           <Item icon="Handshake" description="Team work" hover={false} />
           <Item icon="Menu" description="Web developer" hover={false} />
-          <Item icon="MonitorSmartphone" description="Responsible design" hover={false} />
+          <Item icon="MonitorSmartphone" description="Responsive design" hover={false} />
           <Item icon="ScanEye" description="Problem solving" hover={false} />
           <Item icon="Database" description="Database Management" hover={false} />
           <Item icon="Cloud" description="Cloud Skills" hover={false} />
@@ -296,7 +297,7 @@ function Services() {
           <Item icon="Smartphone" description="Mobile Development" hover={false} />
           <Item icon="Handshake" description="Team work" hover={false} />
           <Item icon="Menu" description="Web developer" hover={false} />
-          <Item icon="MonitorSmartphone" description="Responsible design" hover={false} />
+          <Item icon="MonitorSmartphone" description="Responsive design" hover={false} />
           <Item icon="ScanEye" description="Problem solving" hover={false} />
           <Item icon="Database" description="Database Management" hover={false} />
           <Item icon="Cloud" description="Cloud Skills" hover={false} />
@@ -304,7 +305,7 @@ function Services() {
           <Item icon="Smartphone" description="Mobile Development" hover={false} />
           <Item icon="Handshake" description="Team work" hover={false} />
           <Item icon="Menu" description="Web developer" hover={false} />
-          <Item icon="MonitorSmartphone" description="Responsible design" hover={false} />
+          <Item icon="MonitorSmartphone" description="Responsive design" hover={false} />
           <Item icon="ScanEye" description="Problem solving" hover={false} />
           <Item icon="Database" description="Database Management" hover={false} />
           <Item icon="Cloud" description="Cloud Skills" hover={false} />
@@ -319,10 +320,10 @@ function Services() {
 // Comps
 
 function CustomCard(props) {
-  const { title, icon, description, children, className } = props;
+  const { id, title, icon, description, children, className } = props;
 
   return (
-    <Card className={`p-4 ${className}`}>
+    <Card id={id} className={`p-4 ${className}`}>
       {(title || description) &&
         <CardHeader>
           <CardTitle className="flex justify-center items-center gap-2"><IconComponent icon={icon} className="text-blue-500" /> {title}</CardTitle>
