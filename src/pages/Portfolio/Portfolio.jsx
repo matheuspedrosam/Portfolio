@@ -111,7 +111,10 @@ function Projects() {
                     <p className="text-sm">
                       {project.description}
                     </p>
-                    <a href={project.link} target="_blank"><Button className="w-full">See</Button></a>
+                    {project.link
+                      ? <a href={project.link} target="_blank"><Button className="w-full">See</Button></a>
+                      : <Button className="w-full" disabled>Private</Button>
+                    }
                   </CardContent>
                 </Card>
               </CarouselItem>
@@ -204,6 +207,7 @@ function Skills() {
         <Item icon="Server" description="Back-end Developing" />
         <Item icon="Database" description="Database" />
         <Item icon="Link" description="API Restful" />
+        <Item icon="Bot" description="AI" />
         <Item icon="BugOff" description="Programing logic" />
         <Item icon="Variable" description="Data structures and Algorithm" />
       </div>
@@ -289,6 +293,7 @@ function Services() {
           <Item icon="Cloud" description="Cloud Skills" hover={false} />
           <Item icon="Mic" description="Comunication" hover={false} />
           <Item icon="Smartphone" description="Mobile Development" hover={false} />
+          <Item icon="Bot" description="AI" hover={false} />
           <Item icon="Handshake" description="Team work" hover={false} />
           <Item icon="Menu" description="Web developer" hover={false} />
           <Item icon="MonitorSmartphone" description="Responsive design" hover={false} />
@@ -297,6 +302,7 @@ function Services() {
           <Item icon="Cloud" description="Cloud Skills" hover={false} />
           <Item icon="Mic" description="Comunication" hover={false} />
           <Item icon="Smartphone" description="Mobile Development" hover={false} />
+          <Item icon="Bot" description="AI" hover={false} />
           <Item icon="Handshake" description="Team work" hover={false} />
           <Item icon="Menu" description="Web developer" hover={false} />
           <Item icon="MonitorSmartphone" description="Responsive design" hover={false} />
@@ -305,6 +311,7 @@ function Services() {
           <Item icon="Cloud" description="Cloud Skills" hover={false} />
           <Item icon="Mic" description="Comunication" hover={false} />
           <Item icon="Smartphone" description="Mobile Development" hover={false} />
+          <Item icon="Bot" description="AI" hover={false} />
           <Item icon="Handshake" description="Team work" hover={false} />
           <Item icon="Menu" description="Web developer" hover={false} />
           <Item icon="MonitorSmartphone" description="Responsive design" hover={false} />
@@ -313,6 +320,7 @@ function Services() {
           <Item icon="Cloud" description="Cloud Skills" hover={false} />
           <Item icon="Mic" description="Comunication" hover={false} />
           <Item icon="Smartphone" description="Mobile Development" hover={false} />
+          <Item icon="Bot" description="AI" hover={false} />
         </Marquee>
       </div>
     </CustomCard>

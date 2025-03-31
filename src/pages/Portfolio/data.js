@@ -30,10 +30,22 @@ const projects = [
         link: "https://github.com/matheuspedrosam/mkt-alimentos-a-vencer"
     },
     {
+        image: "/Sootz-SaaS.png",
+        title: "Sootz SaaS",
+        description: "A B2B SaaS platform for contract management, integrated with Google solutions like Drive and Workspace. Developed at Itnsify, using React Native and Firebase.",
+        link: ""
+    },
+    {
         image: "/jackTheJumper.png",
         title: "Jack The Jumper",
         description: 'A 2D platformer game built with Unity and C# for a college subject, where players jump in a tree to achieve the highest score. Inspered in "João e o Pé de Feijão" with classic gameplay mechanics.',
         link: "https://phenrique01.github.io/Jack-The-Jumper/"
+    },
+    {
+        image: "/python-bot.png",
+        title: "Python Bot",
+        description: "Python Bot to generate a daily report on WhatsApp for my parents about our small businesses. It consists of accessing our booking software, downloading the Excel, reading, and sending the data to my parents.",
+        link: "https://github.com/matheuspedrosam/Bot-Python"
     },
     {
         image: "/world-tour.png",
