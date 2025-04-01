@@ -282,7 +282,7 @@ function Courses() {
 
 function Services() {
   return (
-    <CustomCard id="softSkills" className="overflow-hidden lg:col-span-2 xl:col-span-1">
+    <CustomCard id="softSkills" className="overflow-hidden lg:col-span-2 xl:col-span-2">
       <div className="grid items-center h-full">
         <Marquee gap={2} className="!p-0 cursor-default">
           <Item icon="Handshake" description="Team work" hover={false} />
