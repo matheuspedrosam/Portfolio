@@ -146,7 +146,7 @@ function Infos() {
       <CustomCard className="col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-1">
         <div className="grid h-full gap-4">
           <h2 className="font-bold text-5xl text-center">02<span className="font-semibold">y</span></h2>
-          <Tag icon="Clock" description="Of experience" descClassName="lg:text-xs xl:text-sm" />
+          <Tag icon="Clock" description="Of experience" className="!flex-nowrap gap-2 lg:!gap-1 xl:gap-2" descClassName="lg:text-xs xl:text-sm text-nowrap" />
         </div>
       </CustomCard>
     </>
@@ -246,7 +246,7 @@ function AboutMe() {
 
         <p className="mb-6">
           Beyond coding, I am always eager to explore new technologies, and stay up-to-date with the latest industry trends.
-          I'm also interested in furthering my education and exploring opportunities to expand my expertise, including a potential master's degree in 🇮🇹.
+          I'm also interested in furthering my education and exploring opportunities to expand my expertise, including a potential Master's and doctoral degrees.
         </p>
 
         <h2 className="text-2xl font-semibold mb-3">Let's Connect!</h2>
